@@ -16,6 +16,6 @@ class ArticleDetailView(DetailView):
 class ArticleListView(ListView):
 
     paginate_by = 5
-    paginate_orphans = 3
+    paginate_orphans = 0
     model = Article
     context_object_name = 'articles_list'
