@@ -6,3 +6,4 @@ Active priorities:
 - [ ] Setup the base for the backend, basic website management - *Julian*
 - [ ] Put together the backend for serving the course roster - *Sarvar*
 - [ ] Get working templates for the front-end going and displaying content - *Harrison and Fawn*
+- [ ] Setup the web server and production environment - *Sujay*
