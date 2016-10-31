@@ -734,15 +734,18 @@
     transition: bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger--squeeze.is-active .hamburger-inner {
+  background: white;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   transition-delay: 0.14s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   .hamburger--squeeze.is-active .hamburger-inner::before {
+    background: white;
     top: 0;
     opacity: 0;
     transition: top 0.1s ease, opacity 0.1s 0.14s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
+    background: white;
     bottom: 0;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);

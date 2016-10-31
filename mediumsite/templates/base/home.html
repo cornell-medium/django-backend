@@ -13,13 +13,18 @@
 <body>
 	<header class="content-wrapper">
 		<img id="logo" src="imgs/logo.png">
-		<button class="hamburger hamburger--collapse" type="button">
-  			<span class="hamburger-box">
-    			<span class="hamburger-inner hamburger-color"></span>
-  			</span>
-		</button>
 	</header>
 
+	<!-- Always on top, fixed on page -->
+	<div id="hamburger-wrapper">
+		<button class="hamburger hamburger--collapse" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner hamburger-color"></span>
+			</span>
+		</button>
+	</div>
+
+	<!-- Only visible on click -->
 	<div class="unselectable" id="nav-screen">
 		<ul>
 			<li><a href="home.html"><span class="content-wrapper">Page 1</span></a></li>
@@ -29,12 +34,24 @@
 	</div>
 
 	<div id="indicator-left">
+		<div id="current-sect">
+			<div>Welcome</div>
+		</div>
 	</div>
 
 	<div id="indicator-right">
 	</div>
 
+	<!-- Main body -->
+	<div class="content-wrapper">
+		<div class="unselectable" id="splash">
+			<h1>m</h1>
+			<div id="dynamic-text"><span id="typed"></span></div>
+		</div>
+	</div>
+
  	<script src="js/jquery-3.1.1.min.js"></script>
+ 	<script src="js/typed.min.js"></script>
  	<script src="js/home.js"></script>
 </body>
 </html>
