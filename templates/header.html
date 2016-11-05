@@ -1,3 +1,5 @@
+{% load static %}
+
  <!doctype html>
 <html lang="en">
 <head>
@@ -6,13 +8,16 @@
  	<title>Medium Design Collective</title>
  	<meta name="description" content="Medium Design Collective">
 
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/hamburgers.css" >
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "css/home.css" %}">
+	<link rel="stylesheet" href="{% static "css/hamburgers.css" %}" >
+
+	<script src="{% static "js/jquery-3.1.1.min.js" %}"></script>
 </head>
 
 <body>
 	<header class="content-wrapper">
-		<img id="logo" src="imgs/logo.png">
+		<img id="logo" src="{% static "imgs/logo.png" %}">
 	</header>
 
 	<!-- Always on top, fixed on page -->
@@ -32,26 +37,3 @@
 			<li><a href="home.html"><span class="content-wrapper">Page 3</span></a></li>
 		</ul>
 	</div>
-
-	<div id="indicator-left">
-		<div id="current-sect">
-			<div>Welcome</div>
-		</div>
-	</div>
-
-	<div id="indicator-right">
-	</div>
-
-	<!-- Main body -->
-	<div class="content-wrapper">
-		<div class="unselectable" id="splash">
-			<h1>m</h1>
-			<div id="dynamic-text"><span id="typed"></span></div>
-		</div>
-	</div>
-
- 	<script src="js/jquery-3.1.1.min.js"></script>
- 	<script src="js/typed.min.js"></script>
- 	<script src="js/home.js"></script>
-</body>
-</html>

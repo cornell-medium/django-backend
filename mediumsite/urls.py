@@ -16,7 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+import views
+
 urlpatterns = [
+	url(r'^$', views.index, name='index'),
+    url(r'^roster/$', views.roster, name='roster'),
     url(r'^admin/', admin.site.urls),
     url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
 ]

@@ -1,0 +1,57 @@
+{% load static %}
+{% include "header.html" %}
+
+<div id="indicator-left">
+	<div class="unselectable" id="current-sect">
+		<div>Welcome</div>
+	</div>
+</div>
+
+<div id="indicator-right">
+</div>
+
+<!-- Main body -->
+<div class="content-wrapper" style="margin-top: -90px;">
+	<div id="main-wrap">
+	<div data-section-title="Welcome" class="section">
+		<div class="unselectable" id="splash">
+			<h1>m</h1>
+			<div id="dynamic-text"><span id="typed"></span></div>
+		</div>
+		<span class="nav-arrow block-down-arrow unselectable">
+			<p>About Us</p>
+			<i class="material-icons md-48">keyboard_arrow_down</i>
+		</span> 
+	</div>
+	<div data-section-title="About Us" class="section" id="about">
+		<span class="nav-arrow block-up-arrow unselectable">
+			<i class="material-icons md-48">keyboard_arrow_up</i>
+			<p>Welcome</p>
+		</span> 
+		<div>
+			<h1>Fostering design at Cornell University</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum nisl quam, at porta orci molestie et. Quisque volutpat nisi a sapien malesuada, aliquet dictum mauris viverra. Suspendisse malesuada diam ac tortor venenatis bibendum. Phasellus ut risus augue. Donec sem eros, congue quis lacus eget, lacinia dignissim nibh. Suspendisse potenti. Mauris sed rhoncus magna, non congue orci. Quisque blandit metus dui.</p>
+		</div>
+		<span class="nav-arrow block-down-arrow unselectable">
+			<p>Join Us</p>
+			<i class="material-icons md-48">keyboard_arrow_down</i>
+		</span> 
+	</div>
+	<div data-section-title="Join Us" class="section" id="join">
+		<span class="nav-arrow block-up-arrow unselectable">
+			<i class="material-icons md-48">keyboard_arrow_up</i>
+			<p>About Us</p>
+		</span> 
+		<div>
+			<h1>Want to learn more about design at Cornell?</h1>
+			<form>
+				<div><i class="material-icons unselectable">email</i><input type="text" placeholder="email">
+				<input type="submit" value="I can't say no"></div>
+			</form>
+		</div>
+	</div>
+	</div>
+</div>
+
+<script src="{% static "js/home.js" %}"></script>
+{% include "footer.html" %}
