@@ -12,7 +12,7 @@ Active priorities:
 
 1. Install [pip](https://pip.pypa.io/en/stable/)
 
-2. Install _[virtualenv](https://virtualenv.pypa.io/en/stable/)_
+2. Install [virtualenv](https://virtualenv.pypa.io/en/stable/)
   * _virtualenv_ is a tool for creating isolated Python environments
 
 3. In the base folder of the repo, call `virtualenv env`
