@@ -250,6 +250,26 @@ span.typed-cursor {
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
 
+div.left-wrapper {
+  width: 60%; }
+
+div.left-wrapper h1{
+  font-size: 22px; }
+
+span.date {
+  color: #ff1393;
+  font-size: 18px; }
+
+span.time {
+  font-size:15px; }
+
+div.event-description{
+  color: #333333;}
+
+a.read-more {
+  color: #ff1393;
+  font-size: 15px;}
+
 @keyframes blink {
   0% {
     opacity: 1; }
