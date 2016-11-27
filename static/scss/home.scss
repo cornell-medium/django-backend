@@ -2,30 +2,6 @@ $blue: #52D8D8;
 $pink-rgb: (255, 19, 147);
 $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
 
-.content-wrapper {
-	position: relative;
-	display: block;
-	max-width: 900px;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.unselectable {
-	-moz-user-select: -moz-none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
-
-button.hamburger {
-	position: fixed;	
-	right: 0px;
-	top: 40px;
-}
-button.hamburger:focus {
-	outline: 0;
-}
-
 div#current-sect {
 	position: fixed;
 	top: 50%;
@@ -44,7 +20,7 @@ div#current-sect div {
 	color: black;
 	height: auto;
 	display: inline-block;
-	font-family: Consolas;
+	font-family: 'Source Code Pro';
 	white-space: nowrap;
 }
 div#dynamic-text {
@@ -53,19 +29,10 @@ div#dynamic-text {
 	transform: translateX(-50%);
 	top: -24vw;
 	color: $pink;
-	font-family: Consolas;
+	font-family: 'Source Code Pro';
 	font-size: 3vw;
 	font-weight: 600;
 	text-align: center;
-}
-div#hamburger-wrapper {
-	position: fixed;
-	max-width: 900px;
-	width: 100%;
-	top: 0px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 101;
 }
 div#indicator-left {
 	position: fixed;
@@ -100,7 +67,7 @@ div#join input[type=text] {
 	padding: 5px 0px 10px 30px;
 	margin-top: 10px;
 	margin-left: -30px;
-	font-family: Consolas;
+	font-family: 'Source Code Pro';
 	font-size: 18px;
 }
 div#join input[type=submit] {
@@ -108,7 +75,7 @@ div#join input[type=submit] {
 	border: 3px solid $pink;
 	background: $pink;
 	color: white;
-	font-family: Consolas;
+	font-family: 'Source Code Pro';
 	font-size: 18px;
 	margin-top: 10px;
 	padding: 11px 20px 8px 20px;
@@ -121,47 +88,6 @@ div#join input[type=submit]:hover {
 }
 div#join input:focus {
 	outline: none;
-}
-div#main-wrap {
-	padding-left: 30px;
-	padding-right: 30px;
-}
-div#nav-screen {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	background: rgba(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3), 0.9);
-	display: none;
-	z-index: 100;
-}
-div#nav-screen ul {
-	position: relative;
-	top: 50%;
-	left: 0px;
-	transform: translateY(-50%);
-
-	margin: 0px;
-	padding: 0px;
-
-	list-style: none;
-}
-div#nav-screen a {
-	display: block;
-	padding: 19px 30px 15px 0px;
-
-	color: #FFFFFF;
-	font-family: Consolas;
-	font-size: 25px;
-	font-weight: 600;
-	text-align: right;
-	text-decoration: none;
-	transition: ease-in-out 0.1s;
-}
-div#nav-screen a:hover {
-	background: rgba(255, 255, 255, 0.7);
-	color: $pink;
 }
 div.section {
 	position: relative;
@@ -180,7 +106,7 @@ div.section div {
 	padding-right: 15px;
 	padding-left: 15px;
 	margin: 0px;
-	font-family: Consolas;
+	font-family: 'Source Code Pro';
 }
 div.section h1 {
 	color: $pink;
@@ -188,6 +114,7 @@ div.section h1 {
 	text-align: center;
 }
 div.section p {
+	font-family: 'Source Sans Pro';
 	font-size: 18px;
 }
 div#splash:hover {
@@ -210,15 +137,6 @@ div#splash h1 {
     margin:0;
 }
 
-img#logo {
-	position: relative;
-	display: inline-block;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	max-width: 200px;
-}
-
 span.block-down-arrow {
 	bottom: 8px;
 }
@@ -239,7 +157,7 @@ span.nav-arrow:hover {
 }
 span.nav-arrow p {
 	color: white;
-	font-family: Consolas;
+	font-family: 'Source Code Pro';
 	font-size: 12px;
 	padding: 0px;
 	transition: ease-in-out 0.3s;
