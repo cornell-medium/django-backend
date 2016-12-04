@@ -9,8 +9,6 @@
  	<meta name="description" content="Medium Design Collective">
 
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Source+Code+Pro|Source+Sans+Pro:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="{% static "css/about.css" %}">
-	<!-- <link rel="stylesheet" href="{% static "css/home.css" %}"> -->
 	<link rel="stylesheet" href="{% static "css/universal.css" %}">
 	<link rel="stylesheet" href="{% static "css/hamburgers.css" %}" >
 
@@ -34,8 +32,8 @@
 	<!-- Only visible on click -->
 	<div class="unselectable" id="nav-screen">
 		<ul>
-			<li><a href="home.html"><span class="content-wrapper">Page 1</span></a></li>
-			<li><a href="home.html"><span class="content-wrapper">Page 2</span></a></li>
-			<li><a href="home.html"><span class="content-wrapper">Page 3</span></a></li>
+			<li><a href="{% url 'index' %}"><span class="content-wrapper">Home</span></a></li>
+			
+			<li><a href="{% url 'about' %}"><span class="content-wrapper">About Us</span></a></li>
 		</ul>
 	</div>
