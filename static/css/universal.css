@@ -16,7 +16,7 @@ body {
   font-family: 'Source Sans Pro'; }
 
 button.hamburger {
-  position: fixed;
+  position: absolute;
   right: 0px;
   top: 40px; }
 
@@ -24,7 +24,7 @@ button.hamburger:focus {
   outline: 0; }
 
 div#hamburger-wrapper {
-  position: fixed;
+  position: absolute;
   max-width: 900px;
   width: 100%;
   top: 0px;

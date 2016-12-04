@@ -18,10 +18,18 @@ from django.contrib import admin
 
 import views
 
-urlpatterns = [
-	url(r'^$', views.index, name='index'),
-    url(r'^about/$', views.about, name='about'),
-    url(r'^roster/$', views.roster, name='roster'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
-]
+maintenance_mode = False
+
+if maintenance_mode:
+    urlpatterns = [
+        url(r'^$', views.maintenance, name='maintenance'),
+        url(r'^admin/', admin.site.urls),
+    ]
+else:
+    urlpatterns = [
+    	url(r'^$', views.index, name='index'),
+        url(r'^about/$', views.about, name='about'),
+        url(r'^roster/$', views.roster, name='roster'),
+        url(r'^admin/', admin.site.urls),
+        url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
+    ]

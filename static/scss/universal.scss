@@ -1,4 +1,5 @@
-$blue: #52D8D8;
+$blue-rgb: (82, 216, 216);
+$blue: rgb(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3));
 $pink-rgb: (255, 19, 147);
 $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
 
@@ -22,7 +23,7 @@ body {
 }
 
 button.hamburger {
-	position: fixed;	
+	position: absolute;	
 	right: 0px;
 	top: 40px;
 }
@@ -31,7 +32,7 @@ button.hamburger:focus {
 }
 
 div#hamburger-wrapper {
-	position: fixed;
+	position: absolute;
 	max-width: 900px;
 	width: 100%;
 	top: 0px;
