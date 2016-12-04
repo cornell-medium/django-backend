@@ -28,6 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     u'159.203.132.232',
     u'cornellmedium.design',
+    u'localhost',
+    u'127.0.0.1',
 ]
 
 
