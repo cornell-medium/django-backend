@@ -3,6 +3,11 @@ $blue: rgb(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3));
 $pink-rgb: (255, 19, 147);
 $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
 
+@font-face {
+    font-family: "Cooper Hewitt Bold";
+    src: url('../misc/CooperHewitt-Bold.woff') format('woff'); 
+}
+
 .content-wrapper {
 	position: relative;
 	display: block;
@@ -31,6 +36,16 @@ button.hamburger:focus {
 	outline: 0;
 }
 
+div#attributions {
+	padding-bottom: 5px;
+	font-family: 'Source Sans Pro';
+	font-size: 9px;
+	text-align: center;
+}
+div#attributions a {
+	color: $pink;
+	text-decoration: none;
+}
 div#hamburger-wrapper {
 	position: absolute;
 	max-width: 900px;

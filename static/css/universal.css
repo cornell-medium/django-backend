@@ -1,3 +1,6 @@
+@font-face {
+  font-family: "Cooper Hewitt Bold";
+  src: url("../misc/CooperHewitt-Bold.woff") format("woff"); }
 .content-wrapper {
   position: relative;
   display: block;
@@ -22,6 +25,16 @@ button.hamburger {
 
 button.hamburger:focus {
   outline: 0; }
+
+div#attributions {
+  padding-bottom: 5px;
+  font-family: 'Source Sans Pro';
+  font-size: 9px;
+  text-align: center; }
+
+div#attributions a {
+  color: #ff1393;
+  text-decoration: none; }
 
 div#hamburger-wrapper {
   position: absolute;
