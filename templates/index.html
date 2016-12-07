@@ -42,6 +42,7 @@
 			<i class="material-icons md-48">keyboard_arrow_down</i>
 		</span> 
 	</div>
+
 	<div data-section-title="Join Us" class="section" id="join">
 		<span class="nav-arrow block-up-arrow unselectable">
 			<i class="material-icons md-48">keyboard_arrow_up</i>
@@ -49,9 +50,15 @@
 		</span> 
 		<div>
 			<h1>Want to learn more about design at Cornell?</h1>
-			<form>
-				<div><i class="material-icons unselectable">email</i><input type="text" placeholder="email">
-				<input type="submit" value="I can't say no"></div>
+			<form action="//facebook.us14.list-manage.com/subscribe/post?u=c1fc50d19af45d5476d2e29dd&amp;id=e9b8d5f6b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div><i class="material-icons unselectable">email</i>
+					<input type="email" value="" placeholder="email" name="EMAIL" id="mce-EMAIL">
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1fc50d19af45d5476d2e29dd_e9b8d5f6b3" tabindex="-1" value=""></div>
+					<input type="submit" value="I can't say no" name="subscribe" id="mc-embedded-subscribe"></div>
+					<div id="mce-responses">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
 			</form>
 		</div>
 	</div>
@@ -59,4 +66,5 @@
 </div>
 
 <script src="{% static "js/home.js" %}"></script>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 {% include "footer.html" %}

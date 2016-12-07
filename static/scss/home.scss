@@ -58,7 +58,7 @@ div#join form i {
 div#join form i:hover {
 	cursor: default;
 }
-div#join input[type=text] {
+div#join input[type=email] {
 	display: inline-block;
 	border: 0px;
 	border-bottom: 1px solid #CCCCCC;
@@ -88,6 +88,11 @@ div#join input[type=submit]:hover {
 }
 div#join input:focus {
 	outline: none;
+}
+div#join div.response {
+	margin: 25px 30px 0px 30px;
+	font-family: 'Source Sans Pro';
+	font-size: 14px;
 }
 div.section {
 	position: relative;

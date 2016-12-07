@@ -54,7 +54,7 @@ div#join form i {
 div#join form i:hover {
   cursor: default; }
 
-div#join input[type=text] {
+div#join input[type=email] {
   display: inline-block;
   border: 0px;
   border-bottom: 1px solid #CCCCCC;
@@ -84,6 +84,11 @@ div#join input[type=submit]:hover {
 
 div#join input:focus {
   outline: none; }
+
+div#join div.response {
+  margin: 25px 30px 0px 30px;
+  font-family: 'Source Sans Pro';
+  font-size: 14px; }
 
 div.section {
   position: relative;
@@ -173,26 +178,6 @@ span.typed-cursor {
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
-
-div.left-wrapper {
-  width: 60%; }
-
-div.left-wrapper h1{
-  font-size: 22px; }
-
-span.date {
-  color: #ff1393;
-  font-size: 18px; }
-
-span.time {
-  font-size:15px; }
-
-div.event-description{
-  color: #333333;}
-
-a.read-more {
-  color: #ff1393;
-  font-size: 15px;}
 
 @keyframes blink {
   0% {
