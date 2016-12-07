@@ -10,6 +10,10 @@ def about(request):
 	context = {}
 	return render(request, 'about.html', context)
 
+def events(request):
+	context = {}
+	return render(request, 'events.html', context)
+
 def maintenance(request):
 	context = {}
 	return render(request, 'construction.html', context)
