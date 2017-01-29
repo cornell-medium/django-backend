@@ -1,14 +1,6 @@
 # Medium Design Collective
 The _Django_ powered web platform for Medium, a student design organization based at Cornell University. 
 
-## Active Tasks
-
-- [ ] Finish design mockups for basic info pages (events, course roster, resources) - _Cindy_
-- [ ] Setup the base for the backend, basic website management - _Julian_
-- [ ] Put together the backend for serving the course roster - _Sarvar_
-- [ ] Get working templates for the front-end going and displaying content - _Harrison and Fawn_
-- [ ] Setup the web server and production environment - _Sujay_
-
 ## Setting up the Development Environment
 
 1. Install [pip](https://pip.pypa.io/en/stable/)
