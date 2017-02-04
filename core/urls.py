@@ -29,6 +29,7 @@ else:
     urlpatterns = [
     	url(r'^$', views.index, name='index'),
         url(r'^about/$', views.about, name='about'),
+        url(r'^apply/$', views.apply, name='apply'),
         url(r'^events/$', views.events, name='events'),
         url(r'^roster/$', views.roster, name='roster'),
         url(r'^admin/', admin.site.urls),
