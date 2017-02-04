@@ -57,8 +57,7 @@ div#positions {
 
 form {
   position: relative;
-  top: 10px;
-  /* Radio button inner circle */ }
+  top: 10px; }
   form div.radio-group {
     padding-left: 10px; }
   form div.radio-indicator {
@@ -83,6 +82,17 @@ form {
     form div.radio-single label {
       position: relative;
       top: -6px; }
+  form div.radio-single input:focus ~ div.radio-indicator div {
+    background: #ff4e88; }
+  form div.radio-single input:checked ~ div.radio-indicator div {
+    background: #ff4e88; }
+  form div.radio-single div.radio-indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #DDD; }
   form input[type=text] {
     outline: none;
     display: block;
@@ -107,17 +117,22 @@ form {
     width: 21px;
     height: 20px;
     opacity: 0; }
-  form div.radio-single input:focus ~ div.radio-indicator div {
-    background: #ff4e88; }
-  form div.radio-single input:checked ~ div.radio-indicator div {
-    background: #ff4e88; }
-  form div.radio-single div.radio-indicator:after {
-    top: 7px;
-    left: 7px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #DDD; }
+  form input[type=submit] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #ff4e88;
+    background: #ff4e88;
+    color: white;
+    font-family: 'Source Code Pro';
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 11px 20px 8px 20px;
+    transition: ease-in-out 0.1s; }
+  form input[type=submit]:hover {
+    background: white;
+    color: #ff4e88;
+    cursor: pointer; }
   form label {
     margin-left: 7px;
     font-family: 'Source Sans Pro';

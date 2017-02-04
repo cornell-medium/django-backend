@@ -1,3 +1,17 @@
+a#join-us {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff4e88;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 3px solid rgba(255, 78, 136, 0);
+  transition: ease-in-out 0.1s; }
+
+a#join-us:hover {
+  border-bottom: 3px solid #ff4e88; }
+
 div#current-sect {
   position: fixed;
   top: 50%;

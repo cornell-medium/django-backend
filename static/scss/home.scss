@@ -2,6 +2,20 @@ $blue: #52D8D8;
 $pink-rgb: (255, 78, 136);
 $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
 
+a#join-us {
+	position: absolute;
+	top: 130px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: $pink;
+	font-size: 18px;
+	text-decoration: none;
+	border-bottom: 3px solid rgba(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3), 0.0);
+	transition: ease-in-out 0.1s;
+}
+a#join-us:hover {
+	border-bottom: 3px solid rgba(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3), 1.0);
+}
 div#current-sect {
 	position: fixed;
 	top: 50%;
