@@ -21,3 +21,7 @@ def maintenance(request):
 def roster(request):
 	context = {}
 	return render(request, 'roster.html', context)
+
+def competition(request):
+	context = {} 
+	return render(request, 'competition.html', context)
