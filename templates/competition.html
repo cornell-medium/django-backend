@@ -2,11 +2,101 @@
 
 {% block styles %}
     <link rel="stylesheet" href="{% static "css/competition.css" %}">
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
 {% endblock %}
 
-{% include "header.html" %}
+ <!doctype html>
+<html lang="en">
+<head>
+ 	<meta charset="utf-8">
 
-<div style="font-family:'GlacialIndifferenceRegular'">adljfladjsflavepoinvaewhfkajsjcoaejraoi</div>
+ 	<title>Medium Design Collective</title>
+ 	<meta name="description" content="Medium Design Collective">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Source+Code+Pro|Source+Sans+Pro:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "css/universal.css" %}">
+	<link rel="stylesheet" href="{% static "css/hamburgers.css" %}" >
+
+	<link rel="shortcut icon" href="{% static "imgs/favicon.ico" %}" >
+	<link rel="icon" type="image/png" href="{% static "imgs/favicon-192x192.png" %}" sizes="192x192">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static "imgs/favicon-180x180.png" %}">
+
+	<script src="{% static "js/jquery-3.1.1.min.js" %}"></script>
+</head>
+
+<body>
+	<header class="content-wrapper">
+		<a href="{% url 'index' %}"><img id="logo" src="{% static "imgs/logo_white.png" %}"></a>
+	</header>
+
+	<!-- Always on top, fixed on page -->
+	<div id="hamburger-wrapper">
+		<button class="hamburger hamburger--collapse" type="button">
+			<span class="hamburger-box">
+				<span class="hamburger-inner hamburger-color"></span>
+			</span>
+		</button>
+	</div>
+
+	<!-- Only visible on click -->
+	<div class="unselectable" id="nav-screen">
+		<ul>
+			<li><a href="{% url 'index' %}"><span class="content-wrapper">Home</span></a></li>
+			<li><a href="{% url 'events' %}"><span class="content-wrapper">Events</span></a></li>
+			<li><a href="{% url 'about' %}"><span class="content-wrapper">About Us</span></a></li>
+		</ul>
+	</div>
+
+
+<div id="indicator-left">
+	<div class="unselectable" id="current-sect">
+		<div>Welcome</div>
+	</div>
+</div>
+
+<div id="indicator-right">
+</div>
+
+<!-- Main body -->
+<div class="content-wrapper" style="margin-top: -90px;">
+	<div id="main-wrap">
+	<div data-section-title="(Re)design Time" class="section">
+		<div>
+
+		</div>
+		<span class="nav-arrow block-down-arrow unselectable">
+			<p>What is this?</p>
+			<i class="material-icons md-48">keyboard_arrow_down</i>
+		</span> 
+	</div>
+	
+	<div data-section-title="Information" class="section" id="about">
+		<span class="nav-arrow block-up-arrow unselectable">
+			<i class="material-icons md-48">keyboard_arrow_up</i>
+			<p>(Re)design Time</p>
+		</span> 
+		<div>
+
+		</div>
+		<span class="nav-arrow block-down-arrow unselectable">
+			<p>What do I need to know?</p>
+			<i class="material-icons md-48">keyboard_arrow_down</i>
+		</span> 
+	</div>
+
+	<div data-section-title="Rules" class="section" id="join">
+		<span class="nav-arrow block-up-arrow unselectable">
+			<i class="material-icons md-48">keyboard_arrow_up</i>
+			<p>What is this?</p>
+		</span> 
+		<div>
+			
+		</div>
+	</div>
+	</div>
+</div>
+
+<script src="{% static "js/home.js" %}"></script>
 {% include "footer.html" %}

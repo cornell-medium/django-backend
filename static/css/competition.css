@@ -4,3 +4,49 @@
   font-family: 'BodoniFLF';
   src: url('../fonts/BodoniFLF-Italic.ttf');
 }
+
+html {
+	background-color: #0f2147;
+}
+
+body {
+	background-color: #0f2147;
+	background: linear-gradient(rgba(15, 33, 71, 0.5), rgba(15, 33, 71, 0.5)), url("../imgs/Time-medium.png") no-repeat fixed;
+	background-position: 35%;
+	background-size: 500px;
+}
+
+/* this is such terrible design don't do this ever again */
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	background-color: white !important;
+}
+
+#nav-screen {
+	background-color: rgba(15, 33, 71, 0.9) !important;
+}
+
+#nav-screen a:hover {
+	color: #0f2147 !important;
+}
+
+#current-sect {
+	background: #e1ad17 !important;
+}
+
+#current-sect div {
+	color: white !important;
+	font-family: 'GlacialIndifferenceRegular' !important;
+}
+
+span.nav-arrow p {
+	font-family: 'GlacialIndifferenceRegular' !important;
+}
+
+span.nav-arrow:hover p{
+	color: white !important;
+}
+
+span.nav-arrow:hover {
+	color: #e1ad17 !important;
+}
