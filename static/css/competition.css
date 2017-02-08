@@ -16,6 +16,58 @@ body {
 	background-size: 500px;
 }
 
+div.section div {
+	font-family: 'GlacialIndifferenceRegular';
+	top:0% !important;
+	transform: translateY(0%)!important;
+}
+
+.secspan {
+	top:0% !important;
+	transform: translateY(0%)!important;
+}
+
+.maintitle {
+	color: white;
+	font-family: 'BodoniFLF';
+	font-size: 50pt;
+	padding: 20px;
+}
+
+.info {
+	color:white;
+}
+
+.subt1 {
+	color:white;
+	margin-bottom: 15px!important;
+	font-family: 'GlacialIndifferenceBold' !important;
+}
+
+.submit {
+	font-family: "BodoniFLF" !important;
+	font-size: 40px;
+	margin-left: 40px!important;
+	padding-top:40px;
+}
+
+.submit a {
+	color:#e1ad17!important;
+	text-decoration: none !important;
+}
+
+.submit a:visited{
+	color:#e1ad17!important;
+}
+
+.subheader {
+	color:#e1ad17!important;
+	font-family: 'BodoniFLF' !important;
+	font-size: 20pt;
+	padding-bottom: 20px;
+	padding-top: 30px;
+}
+
 /* this is such terrible design don't do this ever again */
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
@@ -23,7 +75,7 @@ body {
 }
 
 #nav-screen {
-	background-color: rgba(15, 33, 71, 0.9) !important;
+	background-color: rgba(15, 33, 71, 0.5) !important;
 }
 
 #nav-screen a:hover {
