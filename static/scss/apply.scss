@@ -1,5 +1,4 @@
-$pink-rgb: (255, 78, 136);
-$pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
+@import "utilities/variables";
 
 h1 {
 	cursor: default;
@@ -70,7 +69,7 @@ div#positions {
 	h2 {
 		padding-left: 6px;
 	}
-
+	
 	@media (max-width: 551px) {
 		text-align: center;
 
@@ -126,6 +125,10 @@ form {
 		height: 6px;
 		border-radius: 50%;
 		background: #DDD;
+	}
+	div.g-recaptcha {
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	input[type=text]  {
 		outline: none;

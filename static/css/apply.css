@@ -93,6 +93,9 @@ form {
     height: 6px;
     border-radius: 50%;
     background: #DDD; }
+  form div.g-recaptcha {
+    padding-top: 10px;
+    padding-bottom: 10px; }
   form input[type=text] {
     outline: none;
     display: block;

@@ -16,7 +16,8 @@
   user-select: none; }
 
 body {
-  font-family: 'Source Sans Pro'; }
+  font-family: 'Source Sans Pro';
+  font-size: 15px; }
 
 button.hamburger {
   position: absolute;
@@ -90,5 +91,12 @@ img#logo {
   left: 50%;
   transform: translateX(-50%);
   max-width: 200px; }
+
+h1 {
+  color: #ff4e88;
+  font-family: 'Source Code Pro';
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center; }
 
 /*# sourceMappingURL=universal.css.map */

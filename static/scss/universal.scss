@@ -1,7 +1,4 @@
-$blue-rgb: (82, 216, 216);
-$blue: rgb(nth($blue-rgb, 1), nth($blue-rgb, 2), nth($blue-rgb, 3));
-$pink-rgb: (255, 78, 136);
-$pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
+@import "utilities/variables";
 
 @font-face {
     font-family: "Cooper Hewitt Bold";
@@ -25,6 +22,7 @@ $pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
 
 body {
 	font-family: 'Source Sans Pro';
+	font-size: 15px;
 }
 
 button.hamburger {
@@ -104,4 +102,12 @@ img#logo {
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 200px;
+}
+
+h1 {
+	color: $pink;
+	font-family: 'Source Code Pro';
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
 }

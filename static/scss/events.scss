@@ -1,5 +1,4 @@
-$pink-rgb: (255, 78, 136);
-$pink: rgb(nth($pink-rgb, 1), nth($pink-rgb, 2), nth($pink-rgb, 3));
+@import "utilities/variables";
 
 div#google_calendar {
 	position: relative;

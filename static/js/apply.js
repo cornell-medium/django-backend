@@ -30,6 +30,7 @@ $(document).ready(function() {
 			$(this).css('color', 'white');
 			$(this).data('selected', true);
 			cur_select = $(this);
+			$(this).children('.role').click();
 
 			$('.description').slideDown(200);
 		}

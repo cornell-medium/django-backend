@@ -12,7 +12,7 @@ def about(request):
 
 def apply(request):
 	context = {}
-	return render(request, 'apply.html', context)
+	return render(request, 'noapply.html', context)
 
 def events(request):
 	context = {}
