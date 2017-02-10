@@ -29,6 +29,7 @@ div.section div {
 
 .maintitle {
 	color: white;
+	cursor: default;
 	font-family: 'BodoniFLF';
 	font-size: 50pt;
 	padding: 20px;
