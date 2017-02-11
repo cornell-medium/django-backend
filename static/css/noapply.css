@@ -2,6 +2,9 @@ div#center-box {
   position: relative;
   top: 36vh;
   transform: translateY(-50%); }
+  @media screen and (max-width: 500px) {
+    div#center-box {
+      top: 40vh; } }
 
 div#watermark {
   position: absolute;
@@ -21,6 +24,11 @@ div#watermark {
     font-size: 50vw;
     font-weight: 600;
     white-space: nowrap; }
+    @media screen and (max-width: 500px) {
+      div#watermark span {
+        top: 40%;
+        left: 13%;
+        font-size: 300px; } }
 
 form div {
   text-align: center; }
