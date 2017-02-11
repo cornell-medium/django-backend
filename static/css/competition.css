@@ -92,6 +92,9 @@ div.section div {
 	font-family: 'GlacialIndifferenceRegular' !important;
 }
 
+span.nav-arrow {
+	z-index: 10;
+}
 span.nav-arrow p {
 	font-family: 'GlacialIndifferenceRegular' !important;
 }
