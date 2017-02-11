@@ -16,7 +16,8 @@
   user-select: none; }
 
 body {
-  font-family: 'Source Sans Pro'; }
+  font-family: 'Source Sans Pro';
+  font-size: 15px; }
 
 button.hamburger {
   position: absolute;
@@ -33,7 +34,7 @@ div#attributions {
   text-align: center; }
 
 div#attributions a {
-  color: #ff1393;
+  color: #ff4e88;
   text-decoration: none; }
 
 div#hamburger-wrapper {
@@ -55,7 +56,7 @@ div#nav-screen {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(255, 19, 147, 0.9);
+  background: rgba(255, 78, 136, 0.9);
   display: none;
   z-index: 100; }
 
@@ -81,7 +82,7 @@ div#nav-screen a {
 
 div#nav-screen a:hover {
   background: rgba(255, 255, 255, 0.7);
-  color: #ff1393; }
+  color: #ff4e88; }
 
 img#logo {
   position: relative;
@@ -90,5 +91,12 @@ img#logo {
   left: 50%;
   transform: translateX(-50%);
   max-width: 200px; }
+
+h1 {
+  color: #ff4e88;
+  font-family: 'Source Code Pro';
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center; }
 
 /*# sourceMappingURL=universal.css.map */

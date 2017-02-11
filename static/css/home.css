@@ -1,10 +1,24 @@
+a#join-us {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff4e88;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 3px solid rgba(255, 78, 136, 0);
+  transition: ease-in-out 0.1s; }
+
+a#join-us:hover {
+  border-bottom: 3px solid #ff4e88; }
+
 div#current-sect {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   height: 100px;
   width: 8px;
-  background: #ff1393; }
+  background: #ff4e88; }
 
 div#current-sect:hover {
   cursor: default; }
@@ -24,7 +38,7 @@ div#dynamic-text {
   left: 50%;
   transform: translateX(-50%);
   top: -24vw;
-  color: #ff1393;
+  color: #ff4e88;
   font-family: 'Source Code Pro';
   font-size: 3vw;
   font-weight: 600;
@@ -68,8 +82,8 @@ div#join input[type=email] {
 
 div#join input[type=submit] {
   display: inline-block;
-  border: 3px solid #ff1393;
-  background: #ff1393;
+  border: 3px solid #ff4e88;
+  background: #ff4e88;
   color: white;
   font-family: 'Source Code Pro';
   font-size: 18px;
@@ -79,7 +93,7 @@ div#join input[type=submit] {
 
 div#join input[type=submit]:hover {
   background: white;
-  color: #ff1393;
+  color: #ff4e88;
   cursor: pointer; }
 
 div#join input:focus {
@@ -108,11 +122,6 @@ div.section div {
   padding-left: 15px;
   margin: 0px;
   font-family: 'Source Code Pro'; }
-
-div.section h1 {
-  color: #ff1393;
-  font-size: 22px;
-  text-align: center; }
 
 div.section p {
   font-family: 'Source Sans Pro';
@@ -153,7 +162,7 @@ span.nav-arrow {
 
 span.nav-arrow:hover {
   cursor: pointer;
-  color: #ff1393; }
+  color: #ff4e88; }
 
 span.nav-arrow p {
   color: white;
@@ -163,14 +172,14 @@ span.nav-arrow p {
   transition: ease-in-out 0.3s; }
 
 span.nav-arrow:hover p {
-  color: #ff1393; }
+  color: #ff4e88; }
 
 span#typed {
   text-align: center;
   letter-spacing: 2px; }
 
 span.typed-cursor {
-  background: #ff1393;
+  background: #ff4e88;
   padding-right: 4px;
   padding-top: 5px;
   margin-left: 8px;
