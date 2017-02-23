@@ -3,5 +3,4 @@ env
 *.pyc
 *.swp
 *.map
-static
 .sqlite3
