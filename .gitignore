@@ -1,7 +1,7 @@
 venv
 env
-static/.sass-cache
 *.pyc
 *.swp
 *.map
-static/.sass-cache
+static
+.sqlite3
