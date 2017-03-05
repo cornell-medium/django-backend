@@ -9,6 +9,7 @@ from apiclient.discovery import build
 from apiclient import discovery
 
 import datetime
+import pytz
 from dateutil import parser
 
 def index(request):
@@ -52,7 +53,11 @@ def events(request):
 		# print(type(event['start'].get('date')))
 		# eventData['date'] = event['start'].get('dateTime', event['start'].get('date'))
 		date = parser.parse(event['start'].get('dateTime', event['start'].get('date')))
-		eventData['date'] = date.strftime("%A %B %W, %Y")
+		eventData['datestr'] = date.strftime("%A %B %d, %Y")
+		if date.tzinfo == None:
+			eventData['datetime'] = pytz.UTC.localize(date)
+		else:
+			eventData['datetime'] = date
 		# if
 
 		eventData['title'] = event['summary']
@@ -62,13 +67,16 @@ def events(request):
 		else:
 			eventData['location'] = ""
 
-		eventData['side'] = curSide
+		events.append(eventData)
+
+	events.sort(key=lambda k: k['datetime'])
+
+	for event in events:
+		event['side'] = curSide
 		if curSide == "left":
 			curSide = "right"
 		else:
 			curSide = "left"
-
-		events.append(eventData)
 
 	context = {
 		'events': events,
