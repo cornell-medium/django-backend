@@ -6,6 +6,4 @@ env
 *.map
 *.sqlite3
 google_secret_key.json
-settings.py
-static/
-static/.gitignore
+secret.py
