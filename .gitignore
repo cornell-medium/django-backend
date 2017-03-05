@@ -5,4 +5,7 @@ env
 *.swp
 *.map
 *.sqlite3
+google_secret_key.json
+settings.py
 static/
+static/.gitignore
