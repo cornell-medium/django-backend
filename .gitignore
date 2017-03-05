@@ -7,3 +7,4 @@ env
 *.sqlite3
 google_secret_key.json
 secret.py
+static/
