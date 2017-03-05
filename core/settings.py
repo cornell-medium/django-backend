@@ -9,13 +9,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     u'159.203.132.232',
-    u'cornellmedium.design',
-    u'localhost',
-    u'127.0.0.1',
+    u'cornellmedium.design'
 ]
 
 
