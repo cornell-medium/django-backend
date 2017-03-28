@@ -87,6 +87,10 @@ def maintenance(request):
 	context = {}
 	return render(request, 'construction.html', context)
 
+def rawexpo(request):
+	context = {}
+	return render(request, 'rawexpo.html', context)
+
 def roster(request):
 	context = {}
 	return render(request, 'roster.html', context)
