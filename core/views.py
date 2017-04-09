@@ -1,16 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-import httplib2
-import os
-
-from oauth2client.service_account import ServiceAccountCredentials
-from apiclient.discovery import build
-from apiclient import discovery
-
 import datetime
-import pytz
-from dateutil import parser
 
 from core.models import Event
 
@@ -29,8 +20,17 @@ def apply(request):
 def events(request):
 	query = Event.objects.order_by('date').all()
 
+	current_date = datetime.date.today()
+	nearest_event = 0
+	nearest_days = (query[0].date - current_date).days
+
 	events = []
 	for idx, elem in enumerate(query):
+		date_delta = (elem.date - current_date).days
+		if (date_delta > 0) and (nearest_days < 0 or (nearest_days > 0 and date_delta < nearest_days)):
+			nearest_event = idx
+			nearest_days = date_delta
+
 		event = dict()
 		event['id'] = idx
 		event['title'] = elem.title
@@ -39,14 +39,20 @@ def events(request):
 		event['location'] = elem.location
 		event['full_date'] = elem.date.strftime("%A %B %d, %Y")
 		event['short_date'] = elem.date.strftime("%m.%d.%y")
-		event['time'] = (elem.start_time.strftime("%I:%M%p").lstrip("0") + "-" +
-						elem.end_time.strftime("%I:%M%p").lstrip("0"))
+		if elem.start_time and elem.end_time:
+			event['time'] = (elem.start_time.strftime("%I:%M%p").lstrip("0") + "-" +
+							elem.end_time.strftime("%I:%M%p").lstrip("0"))
 		event['description'] = elem.description
+		event['facebook'] = elem.facebook
 
 		events.append(event)
 
+	if nearest_days < 0:
+		nearest_event = events[-1]['id']
+
 	context = {
 		'events': events,
+		'nearest_event': nearest_event,
 	}
 	return render(request, 'events.html', context)
 
