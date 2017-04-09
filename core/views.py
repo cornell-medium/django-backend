@@ -12,6 +12,8 @@ import datetime
 import pytz
 from dateutil import parser
 
+from core.models import Event
+
 def index(request):
 	context = {}
 	return render(request, 'index.html', context)
@@ -25,58 +27,23 @@ def apply(request):
 	return render(request, 'noapply.html', context)
 
 def events(request):
-	scopes = ['https://www.googleapis.com/auth/calendar.readonly']
-
-	credentials = ServiceAccountCredentials.from_json_keyfile_name(
-		os.path.join(os.path.dirname(__file__), '..', 'google_secret_key.json'), scopes)
-
-	http = credentials.authorize(httplib2.Http())
-	service = discovery.build('calendar', 'v3', http=http)
-
-	now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
-	queryResult = service.events().list(
-		calendarId='o5ne9e7vs8ggvdsr3lfd3ikv10@group.calendar.google.com',
-		timeMin=now).execute()
+	query = Event.objects.order_by('date').all()
 
 	events = []
-	curSide = "left"
-	for event in queryResult.get('items', []):
-		eventData = dict()
+	for idx, elem in enumerate(query):
+		event = dict()
+		event['id'] = idx
+		event['title'] = elem.title
+		event['image'] = elem.image.url[7:]
 
+		event['location'] = elem.location
+		event['full_date'] = elem.date.strftime("%A %B %d, %Y")
+		event['short_date'] = elem.date.strftime("%m.%d.%y")
+		event['time'] = (elem.start_time.strftime("%I:%M%p").lstrip("0") + "-" +
+						elem.end_time.strftime("%I:%M%p").lstrip("0"))
+		event['description'] = elem.description
 
-		# if event['start'].get('date') != None:
-		# 	d = datetime.datetime.strptime(event['start'].get('date'), "%Y-%m-%d")
-		# 	eventDate = d.strftime("%A %B %w, %Y")
-		# else:
-		# 	d = datetime.datetime.strptime(event['start'].get('dateTime'), "%Y-%m-%dTT%H:%M:%S%Z")
-		# 	eventDate = d.strftime("%A %B %w, %Y")
-		# print(type(event['start'].get('date')))
-		# eventData['date'] = event['start'].get('dateTime', event['start'].get('date'))
-		date = parser.parse(event['start'].get('dateTime', event['start'].get('date')))
-		eventData['datestr'] = date.strftime("%A %B %d, %Y")
-		if date.tzinfo == None:
-			eventData['datetime'] = pytz.UTC.localize(date)
-		else:
-			eventData['datetime'] = date
-		# if
-
-		eventData['title'] = event['summary']
-		eventData['description'] = event['description']
-		if 'location' in event:
-			eventData['location'] = event['location']
-		else:
-			eventData['location'] = ""
-
-		events.append(eventData)
-
-	events.sort(key=lambda k: k['datetime'])
-
-	for event in events:
-		event['side'] = curSide
-		if curSide == "left":
-			curSide = "right"
-		else:
-			curSide = "left"
+		events.append(event)
 
 	context = {
 		'events': events,
