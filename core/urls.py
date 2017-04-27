@@ -32,8 +32,9 @@ else:
         url(r'^apply/$', views.apply, name='apply'),
         url(r'^events/$', views.events, name='events'),
         url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
+	url(r'^publication/$', views.publication, name='publication'),
         # url(r'^roster/$', views.roster, name='roster'),
         # url(r'^competition/$', views.competition, name='competition'),
         url(r'^admin/', admin.site.urls),
-        url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
+        # url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
     ]

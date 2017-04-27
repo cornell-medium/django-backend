@@ -68,6 +68,10 @@ def roster(request):
 	context = {}
 	return render(request, 'roster.html', context)
 
+def publication(request):
+	context = {}
+	return render(request, 'publication.html', context)
+
 def competition(request):
 	context = {} 
 	return render(request, 'competition.html', context)
