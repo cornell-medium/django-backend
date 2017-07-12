@@ -1,6 +1,8 @@
 venv
 env
 uploads
+media
+static
 *.idea
 *.pyc
 *.swp

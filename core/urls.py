@@ -13,21 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 
 import views
 
-maintenance_mode = False
-
-if maintenance_mode:
+if settings.MAINTENANCE:
     urlpatterns = [
         url(r'^$', views.maintenance, name='maintenance'),
         url(r'^admin/', admin.site.urls),
     ]
 else:
     urlpatterns = [
-    	url(r'^$', views.index, name='index'),
+        url(r'^$', views.index, name='index'),
         url(r'^about/$', views.about, name='about'),
         url(r'^apply/$', views.apply, name='apply'),
         url(r'^events/$', views.events, name='events'),
@@ -38,3 +38,6 @@ else:
         url(r'^admin/', admin.site.urls),
         # url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
     ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
