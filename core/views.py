@@ -56,18 +56,6 @@ def events(request):
 	}
 	return render(request, 'events.html', context)
 
-def maintenance(request):
-	context = {}
-	return render(request, 'construction.html', context)
-
 def rawexpo(request):
 	context = {}
 	return render(request, 'rawexpo.html', context)
-
-def roster(request):
-	context = {}
-	return render(request, 'roster.html', context)
-
-def competition(request):
-	context = {} 
-	return render(request, 'competition.html', context)

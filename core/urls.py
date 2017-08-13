@@ -18,22 +18,11 @@ from django.contrib import admin
 
 import views
 
-maintenance_mode = False
-
-if maintenance_mode:
-    urlpatterns = [
-        url(r'^$', views.maintenance, name='maintenance'),
-        url(r'^admin/', admin.site.urls),
-    ]
-else:
-    urlpatterns = [
-    	url(r'^$', views.index, name='index'),
-        url(r'^about/$', views.about, name='about'),
-        url(r'^apply/$', views.apply, name='apply'),
-        url(r'^events/$', views.events, name='events'),
-        url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
-        # url(r'^roster/$', views.roster, name='roster'),
-        # url(r'^competition/$', views.competition, name='competition'),
-        url(r'^admin/', admin.site.urls),
-        url(r'^pub/', include('articles.urls')),  # links to urlCONF in articles
-    ]
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^about/$', views.about, name='about'),
+    url(r'^apply/$', views.apply, name='apply'),
+    url(r'^events/$', views.events, name='events'),
+    url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
+    url(r'^admin/', admin.site.urls),
+]
