@@ -7,18 +7,10 @@ from core.models import Event
 
 def index(request):
 	context = {}
-	return render(request, 'index.html', context)
-
-def about(request):
-	context = {}
-	return render(request, 'about.html', context)
-
-def apply(request):
-	context = {}
-	return render(request, 'noapply.html', context)
+	return render(request, 'sections/index.html', context)
 
 def events(request):
-	query = Event.objects.order_by('date').all()
+	query = Event.objects.order_by('date').all().reverse()
 
 	current_date = datetime.date.today()
 	nearest_event = 0
@@ -40,7 +32,7 @@ def events(request):
 		event['full_date'] = elem.date.strftime("%A %B %d, %Y")
 		event['short_date'] = elem.date.strftime("%m.%d.%y")
 		if elem.start_time and elem.end_time:
-			event['time'] = (elem.start_time.strftime("%I:%M%p").lstrip("0") + "-" +
+			event['time'] = (elem.start_time.strftime("%I:%M%p").lstrip("0") + " - " +
 							elem.end_time.strftime("%I:%M%p").lstrip("0"))
 		event['description'] = elem.description
 		event['facebook'] = elem.facebook
@@ -54,8 +46,8 @@ def events(request):
 		'events': events,
 		'nearest_event': nearest_event,
 	}
-	return render(request, 'events.html', context)
+	return render(request, 'sections/events.html', context)
 
 def rawexpo(request):
 	context = {}
-	return render(request, 'rawexpo.html', context)
+	return render(request, 'sections/rawexpo.html', context)

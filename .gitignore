@@ -8,5 +8,5 @@ uploads
 *.sqlite3
 articles/migrations
 core/migrations
-google_secret_key.json
 secret.py
+.vscode

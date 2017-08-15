@@ -20,8 +20,6 @@ import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^about/$', views.about, name='about'),
-    url(r'^apply/$', views.apply, name='apply'),
     url(r'^events/$', views.events, name='events'),
     url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
     url(r'^admin/', admin.site.urls),
