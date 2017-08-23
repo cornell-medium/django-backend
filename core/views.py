@@ -48,6 +48,14 @@ def events(request):
 	}
 	return render(request, 'sections/events.html', context)
 
+def joinus(request):
+	context = {}
+	return render(request, 'sections/joinus.html', context)
+
 def rawexpo(request):
 	context = {}
 	return render(request, 'sections/rawexpo.html', context)
+
+def teams(request):
+	context = {}
+	return render(request, 'sections/teams.html', context)

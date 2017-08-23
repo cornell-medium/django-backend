@@ -21,6 +21,8 @@ import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^events/$', views.events, name='events'),
+    url(r'^joinus/$', views.joinus, name='joinus'),
     url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
+    url(r'^teams/$', views.teams, name='teams'),
     url(r'^admin/', admin.site.urls),
 ]
