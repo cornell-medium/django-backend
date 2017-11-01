@@ -51,6 +51,10 @@ def events(request):
     return render(request, 'sections/events.html', context)
 
 
+def designpanel(request):
+    return render(request, 'sections/designpanel.html', {})
+
+
 def joinus(request):
     context = {}
     return render(request, 'sections/joinus.html', context)
