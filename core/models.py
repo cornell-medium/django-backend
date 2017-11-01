@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Event(models.Model):
     title = models.CharField(max_length=20)
     image = models.ImageField("Cover (best ratio is 3:2)", upload_to='static/imgs/events')
@@ -12,6 +13,7 @@ class Event(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Article(models.Model):
 
