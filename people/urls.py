@@ -15,21 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.conf import settings
-from django.conf.urls.static import static
+from views import people_view
 
 import views
 
+app_name = "people"
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^events/$', views.events, name='events'),
-    url(r'^designpanel/$', views.designpanel, name='designpanel'),
-    url(r'^joinus/$', views.joinus, name='joinus'),
-    url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
-    url(r'^teams/$', views.teams, name='teams'),
-    url(r'^people', include('people.urls'), name='people'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', people_view, name='people'),
 ]
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
