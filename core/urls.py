@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^joinus/$', views.joinus, name='joinus'),
     url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
     url(r'^teams/$', views.teams, name='teams'),
+    url(r'^editorial/$', views.editorial, name='editorial'),
     url(r'^people', include('people.urls'), name='people'),
     url(r'^admin/', admin.site.urls),
 ]
