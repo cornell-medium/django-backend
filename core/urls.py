@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
     url(r'^teams/$', views.teams, name='teams'),
     url(r'^people', include('people.urls'), name='people'),
+    url(r'^editorial', views.editorial, name='editorial'),
     url(r'^admin/', admin.site.urls),
 ]
 

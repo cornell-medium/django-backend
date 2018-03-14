@@ -64,6 +64,9 @@ def rawexpo(request):
     context = {}
     return render(request, 'sections/rawexpo.html', context)
 
+def editorial(request):
+    context = {}
+    return render(request, 'sections/editorial.html', context)
 
 def teams(request):
     context = {}
