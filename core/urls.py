@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^events/$', views.events, name='events'),
     url(r'^designpanel/$', views.designpanel, name='designpanel'),
     url(r'^joinus/$', views.joinus, name='joinus'),
-    url(r'^rawexpo/$', views.rawexpo, name='rawexpo'),
+    url(r'^raw/$', views.rawexpo, name='rawexpo'),
     url(r'^teams/$', views.teams, name='teams'),
     url(r'^admin/', admin.site.urls),
 ]
