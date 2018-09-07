@@ -21,9 +21,10 @@ from . import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^events/$', views.events, name='events'),
-    url(r'^designpanel/$', views.designpanel, name='designpanel'),
+    # url(r'^designpanel/$', views.designpanel, name='designpanel'),
     url(r'^joinus/$', views.joinus, name='joinus'),
     url(r'^raw/$', views.rawexpo, name='rawexpo'),
-    url(r'^teams/$', views.teams, name='teams'),
+    url(r'^projects/$', views.projects, name='projects'),
     url(r'^admin/', admin.site.urls),
+    url(r'^contact/$', views.contact, name ='contact' ),
 ]
