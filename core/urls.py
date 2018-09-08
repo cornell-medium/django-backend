@@ -24,7 +24,7 @@ urlpatterns = [
     # url(r'^designpanel/$', views.designpanel, name='designpanel'),
     #url(r'^joinus/$', views.joinus, name='joinus'),
     url(r'^raw/$', views.rawexpo, name='rawexpo'),
-    # url(r'^projects/$', views.projects, name='projects'),
+    url(r'^projects/$', views.projects, name='projects'),
     url(r'^contact/$', views.contact, name ='contact' ),
     url(r'^admin/', admin.site.urls),
 ]

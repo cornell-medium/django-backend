@@ -69,9 +69,9 @@ def rawexpo(request):
 #     context = {}
 #     return render(request, 'sections/teams.html', context)
 
-# def projects(request):
-#     context = {}
-#     return render(request, 'sections/projects.html', context)
+def projects(request):
+    context = {}
+    return render(request, 'sections/projects.html', context)
 
 
 def contact(request):
