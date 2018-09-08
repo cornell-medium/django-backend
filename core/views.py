@@ -57,7 +57,7 @@ def events(request):
 
 def joinus(request):
     context = {}
-    return render(request, 'sections/apply.html', context)
+    return render(request, 'sections/joinus.html', context)
 
 
 def rawexpo(request):
