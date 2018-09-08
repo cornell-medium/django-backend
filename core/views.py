@@ -51,29 +51,20 @@ def events(request):
     return render(request, 'sections/events.html', context)
 
 
-# def designpanel(request):
-#     return render(request, 'sections/designpanel.html', {})
+def designpanel(request):
+    return render(request, 'sections/designpanel.html', {})
 
 
-# def joinus(request):
-#     context = {}
-#     return render(request, 'sections/joinus.html', context)
-#
+def joinus(request):
+    context = {}
+    return render(request, 'sections/joinus.html', context)
+
 
 def rawexpo(request):
     context = {}
     return render(request, 'sections/rawexpo.html', context)
 
 
-# def teams(request):
-#     context = {}
-#     return render(request, 'sections/teams.html', context)
-
-def projects(request):
+def teams(request):
     context = {}
-    return render(request, 'sections/projects.html', context)
-
-
-def contact(request):
-    context = {}
-    return render(request, 'sections/contact.html', context)
+    return render(request, 'sections/teams.html', context)
