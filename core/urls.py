@@ -25,6 +25,6 @@ urlpatterns = [
     url(r'^joinus/$', views.joinus, name='joinus'),
     url(r'^raw/$', views.rawexpo, name='rawexpo'),
     url(r'^projects/$', views.projects, name='projects'),
-    url(r'^admin/', admin.site.urls),
     url(r'^contact/$', views.contact, name ='contact' ),
+    url(r'^admin/', admin.site.urls),
 ]
