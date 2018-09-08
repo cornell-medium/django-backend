@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^joinus/$', views.joinus, name='joinus'),
     url(r'^raw/$', views.rawexpo, name='rawexpo'),
     url(r'^teams/$', views.teams, name='teams'),
+    url(r'^contact/$', views.contact, name='contact'),
     url(r'^admin/', admin.site.urls),
 ]

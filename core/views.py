@@ -59,6 +59,10 @@ def joinus(request):
     context = {}
     return render(request, 'sections/joinus.html', context)
 
+def contact(request):
+    context = {}
+    return render(request, 'sections/contact.html', context)
+
 
 def rawexpo(request):
     context = {}
