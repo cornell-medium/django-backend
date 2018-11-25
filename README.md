@@ -16,29 +16,25 @@ The _Django_ powered web platform for Medium, a student design organization base
 
 `git clone https://github.com/cornell-medium/django-backend`
 
-2. Setup the `static` submodule, which connects this repo to the [frontend repo](https://github.com/cornell-medium/medium-frontend). All HTML documents, stylesheets, and client-side scripts are managed in the frontend repo. You can setup the submodule with:
-
-`git submodule update --init --recursive`
-
-3. Navigate into the backend directory:
+2. Navigate into the backend directory:
 
 `cd django-backend`
 
-4. Setup a virtual environment for the project by running:
+3. Setup a virtual environment for the project by running:
 
 `virtualenv venv`
 
-5. Now go ahead and activate the virtual environment:
+4. Now go ahead and activate the virtual environment:
 
 `source venv/bin/activate`
 
-6. With the virtual enviornment setup and activated, install the project dependencies:
+5. With the virtual enviornment setup and activated, install the project dependencies:
 
 `pip install -r requirements.txt`
 
-7. Add the Django secret key to the project - you'll have to talk to somebody who already has it setup. Put the secret key in the file `secret.py` in the root of the project.
+6. Add the Django secret key to the project - you'll have to talk to somebody who already has it setup. Put the secret key in the file `secret.py` in the root of the project.
 
-8. Run the database migrations:
+7. Run the database migrations:
 
 `python manage.py migrate --run-syncdb`
 
