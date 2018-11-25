@@ -1,0 +1,74 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+{% block resources %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="fullscreen-background">
+    <video autoplay loop muted class="fullscreen-background__video">
+        <source src="{% static 'videos/RAW.mp4' %}">
+    </video>
+    <div class="fullscreen-background__overlay"></div>
+    <div class="fullscreen-background__text">
+        <h1 class="unselectable">medium design collective</h1>
+        <h4 class="unselectable">applications due 9/11 11:59pm</h4>
+        <p style="font-size:10px"><br/></p>
+        <a href="https://medium1.typeform.com/to/EvuQMw" style="padding: 7px 28px;" class="fullscreen-background__text__apply" role="button">apply</a>
+    </div>
+</div>
+<div class="narrative">
+    <div class="narrative__wrap">
+        <div class="narrative__text-wrap left">
+            <div class="narrative__text">
+                <div class="narrative__title">mission</div>
+                Medium Design Collective exists to connect independent thinkers
+                of varying academic backgrounds through the design process. At
+                its core, the design process is about breaking large problems into
+                manageable ones &#8212 a skill that is valued in
+                professionals of all fields. Throughout the year, Medium hosts a number of talks, expos, and workshops which serve
+                the double purpose of teaching design and strengthening Cornell's community.
+            </div>
+        </div>
+        <div class="narrative__img narrative__right" style="background-image: url('{% static 'imgs/raw.jpg' %}');"></div>
+    </div>
+    <div class="narrative__wrap">
+        <div class="narrative__text-wrap right">
+            <div class="narrative__text">
+                <div class="narrative__title">community</div>
+                The members of Medium are very diverse in terms
+                of both their academic interests and personal backgrounds. Individuals
+                seeking a fresh perspective, a respite from normal college life, and a
+                highly motivated work environment will find themselves at home within
+                the Medium community. Add your email below to receive regular updates
+                on Medium and design-related happenings on campus!
+
+                <form action="//facebook.us14.list-manage.com/subscribe/post?u=c1fc50d19af45d5476d2e29dd&amp;id=e9b8d5f6b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate narrative__form" target="_blank" novalidate>
+                    <input type="email" class="narrative__form__email" placeholder="email address" name="EMAIL" id="mce-EMAIL" />
+                    <input type="submit" value="sign up" class="narrative__form__submit" name="subscribe" id="mc-embedded-subscribe">
+                </form>
+                <div id="mce-responses">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+            </div>
+        </div>
+        <div class="narrative__img narrative__left" style="background-image: url('{% static 'imgs/team.jpg' %}');"></div>
+    </div>
+
+    <div class="fullscreen-background">
+        <a href="https://www.facebook.com/events/236180950400003/">
+          <video autoplay loop muted class="fullscreen-background__promo">
+            <source src="{% static 'videos/promo_medium.mp4' %}">
+         </video>
+         </a>
+
+
+    </div>
+    <!-- <div class="newsletter">
+        <div class="newsletter__text">newsletter</div>
+        <div class="newsletter__field"></div>
+    </div>-->
+</div>
+{% endblock %}
