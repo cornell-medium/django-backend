@@ -10,3 +10,4 @@ articles/migrations
 core/migrations
 secret.py
 .vscode
+.DS_Store
