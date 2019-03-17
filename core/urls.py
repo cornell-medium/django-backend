@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^raw/$', views.rawexpo, name='rawexpo'),
     url(r'^teams/$', views.teams, name='teams'),
     url(r'^admin/', admin.site.urls),
+    url(r'^creators/$', views.creators, name='creators'),
 ]

@@ -1,0 +1,35 @@
+.creators-nav h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 38px;
+    padding: 20px;
+}
+
+.creators-content {
+    padding: .35%;
+}
+.placeholder{
+  display:inline-block;
+  position:relative;
+  width: 60vw;
+  height:87vh;
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+.gridContainer{
+  width:100%;
+  height:100%;
+}
+
+.gridTile
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-origin:center;
+}
