@@ -55,8 +55,8 @@ $(document).ready(function() {
 	RAW is interdisciplinary, NOT siloed.
 	RAW is a celebration of creativity, NOT just quarter cards and swag (although we will have them).
 	<br/>
-	RAW EXPO will be held on <b>April 26th</b> from <b>7:30pm - 9:30pm</b> in <b>Milstein Dome.</b>
-	<br/><a style="color:black; text-decoration:underline;" href="https://www.facebook.com/events/168087643848813/">RSVP</a> to see how your peers create.
+<!-- 	RAW EXPO will be held on <b>April 26th</b> from <b>7:30pm - 9:30pm</b> in <b>Milstein Dome.</b> -->
+<!-- 	<br/><a style="color:black; text-decoration:underline;" href="https://www.facebook.com/events/168087643848813/">RSVP</a> to see how your peers create. -->
 	</div>
 </div>
 </div>
@@ -69,22 +69,8 @@ $(document).ready(function() {
 		<div  class='picture__img__img'><img id='pic_4' src='{% static 'imgs/raw/4.jpg' %}'/></div>
 		<div  class='picture__img__img'><img id='pic_5' src='{% static 'imgs/raw/5.jpg' %}'/></div>
 		<div  class='picture__img__img'><img id='pic_6' src='{% static 'imgs/raw/6.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_7' src='{% static 'imgs/raw/7.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_8' src='{% static 'imgs/raw/8.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_9' src='{% static 'imgs/raw/9.jpg' %}'/></div>
-		<div class="picture__heading1"><h1>RAW EXPO</h1></div>
-		<div  class='picture__img__img'><img id='pic_10' src='{% static 'imgs/raw/10.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_11' src='{% static 'imgs/raw/11.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_12' src='{% static 'imgs/raw/12.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_13' src='{% static 'imgs/raw/13.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_14' src='{% static 'imgs/raw/14.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_15' src='{% static 'imgs/raw/15.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_16' src='{% static 'imgs/raw/16.jpg' %}'/></div>
-		<div class="picture__heading2"><h6>4.26.18<br/>MILSTEIN DOME<br/>730-930PM</h6></div>
-		<div  class='picture__img__img'><img id='pic_17' src='{% static 'imgs/raw/17.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_18' src='{% static 'imgs/raw/18.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_19' src='{% static 'imgs/raw/19.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_20' src='{% static 'imgs/raw/20.jpg' %}'/></div>
+
+		<div id="chart"></div>
 		<div id="last_pic" class='picture__img__img'><img style="filter: none;" id='pic_21' src='{% static 'imgs/raw/21.jpg' %}'/></div>
 	</div>
 
@@ -105,5 +91,85 @@ $(document).ready(function() {
 	</div>
 </div>
 </div>
+
+<!-- interactivity script -->
+<!-- taken from https://bl.ocks.org/philipcdavis/d0f35125d0ac936cee34151267b5057b -->
+ <script src="https://d3js.org/d3.v4.min.js"></script>
+ <script>
+      (function() {
+        var width = window.innerWidth * 2,
+          height = window.innerHeight * 2;
+
+        var x = d3.scaleLinear()
+          .domain([0, 100])
+          .range([0, width]);
+
+        var y = d3.scaleLinear()
+          .domain([0, 100])
+          .range([0, height]);
+
+        var colors = ["grey", "#bfafa0", "#B79CB2", "#CFB492", "#C69C9C", "#b8bfa3", "black"];
+        var colorScale = d3.scaleQuantize().domain([0,1]).range(colors);
+
+        var data = d3.range(90).map(function() {
+          var dataObject =  {
+            x: Math.random() * 100,
+            y: Math.random() * 100,
+            yv: Math.random() * 0.4,
+            size: (Math.random() * 75) + 25,
+            color: colorScale(Math.random())
+          };
+
+          return dataObject;
+        });
+
+        var canvas = d3.select("#chart").append("canvas")
+          .attr("width", width)
+          .attr("height", height)
+          .attr("id", "canvas");
+
+        // node returns first dom element in a selection
+        var context = canvas.node().getContext("2d");
+
+        d3.select(window).on('resize', function(){
+
+          var htmlCanvas = document.getElementById('canvas');
+          var context = htmlCanvas.getContext('2d');
+          width = window.innerWidth * 2;
+          htmlCanvas.width = width;
+          height = window.innerHeight * 2;
+          htmlCanvas.height = height;
+          x = d3.scaleLinear()
+              .domain([0, 100])
+              .range([0, width]);
+
+          y = d3.scaleLinear()
+              .domain([0, 100])
+              .range([0, height]);
+        });
+
+
+        // the timer method calls a function repeatedly
+        d3.timer(function() {
+          context.clearRect(0, 0, width, height);
+
+          data.forEach(function(d) {
+            d.y -= d.yv;
+
+            // Recycle old circles
+            if(d.y < (0 - d.size) ) {
+              d.y = 100 + d.size;
+            }
+
+             context.fillStyle = d.color;
+             context.beginPath();
+             context.arc(x(d.x), y(d.y), d.size, 0, 2 * Math.PI);
+
+             context.fill();
+           });
+        });
+      })();
+
+    </script>
 
 {% endblock %}
