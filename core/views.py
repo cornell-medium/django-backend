@@ -68,3 +68,7 @@ def rawexpo(request):
 def teams(request):
     context = {}
     return render(request, 'sections/teams.html', context)
+
+def creators(request):
+    context = {}
+    return render(request, 'sections/creatorshome.html', context)
