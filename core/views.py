@@ -55,6 +55,11 @@ def designpanel(request):
     return render(request, 'sections/designpanel.html', {})
 
 
+def login(request):
+    context = {}
+    return render(request, 'sections/login.html', context)
+
+
 def joinus(request):
     context = {}
     return render(request, 'sections/joinus.html', context)
