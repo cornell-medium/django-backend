@@ -17,13 +17,43 @@
     {% block resources %}
     {% endblock %}
 </head>
-<body>
+<body onresize="ImageGrid(options)" onLoad="ImageGrid(options)">
     <!-- <div id="hamburger"><i data-feather="menu"></i></div> -->
     
     <div class="creators">
 		{% block content %}
 		<div class="creators-nav"><h1>Creators of Cornell</h1></div>
-		<div class="creators-content"><div class="placeholder"></div></div>
+		<div class="creators-content">
+			<div class="flex">
+			<div class="placeholder"></div>
+			<div class="creators_preview">
+				<div class="creator_preview_name">
+					<h1>Caley Drooff</h1>
+				</div>
+				<div class="creator_preview_proj_title">
+					<div>
+							<h2>The Water Project</h2>
+							<p>The project shown is from my graduate thesis on  re-designing water and how water is actually wet.</p>
+					</div>
+				</div>
+				<div class="creator_preview_buttons">
+					<div class="preview_back_btn">
+						<div>
+							<h2>Go Back</h2>
+							<img src="{% static 'imgs/creators/arrow.png' %}" />
+						</div>
+					</div>	
+					<div class="preview_next_btn">
+						<div>
+								<h2>Go to Caley's Portfolio</h2>
+								<img src="{% static 'imgs/creators/arrow.png' %}" />
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
         {% endblock %}
     </div>
 </body>
@@ -36,16 +66,23 @@
 <!-- <script>feather.replace();</script> -->
 <script>
 	var options = {
-		imgSrc : "https://unsplash.it/g/1024/768?image=874",
+		imgSrc : "{% static 'imgs/design.jpg' %}",
 		containerName : "placeholder",
-		rows:5,
-		columns:5,
+		rows:3,
+		columns:3,
 		margin:2.5,
 		animTime: 0.3
 	  }
 	  
 	  function ImageGrid(defaults)
 	  {
+		
+		var gridContainer = document.getElementsByClassName('gridContainer');
+		if(gridContainer.length > 0){
+			gridContainer[0].parentNode.removeChild(gridContainer[0])
+		}
+
+		
 		var r = defaults.rows;
 		var c = defaults.columns;
 		var margin = defaults.margin;
@@ -117,6 +154,7 @@
 		}
 	  }
 	  
-	  ImageGrid(options);
+		document.read
+	  // ImageGrid(options);
 </script>
 </html>
