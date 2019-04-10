@@ -169,12 +169,24 @@
 	// height: 400px;
 	// position: absolute;
 
-	.instructions {
+	#instructions1 {
 	  position: absolute;
 	  font-weight: 500;
 	  font-size: 20px;
 		margin-left: 5%;
 		margin-top: 5%;
+	  color: #fff;
+	  border: 3px solid #fff;
+	  border-radius: 6px;
+	  padding: 8px;
+	}
+
+	#instructions2 {
+	  position: absolute;
+	  font-weight: 500;
+	  font-size: 20px;
+		margin-left: 5%;
+		margin-top: 10%;
 	  color: #fff;
 	  border: 3px solid #fff;
 	  border-radius: 6px;

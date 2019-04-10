@@ -69,7 +69,10 @@
 		</div>
 
 	<div id="chart" class="bubbles section">
-		<div class="instructions"> pop a bubble </div><canvas></canvas>
+		<div id="instructions1"> pop a bubble </div>
+		<div id="instructions2"> see what orgs are coming </div>
+		<canvas></canvas>
+
 	</div>
 	<div class="rsvp section" >
 
@@ -233,14 +236,15 @@ window.requestAnimationFrame(animate);
 
 var createBubble = function() {
  this.position = {x: 0, y: 0};
- this.radius = 25 + Math.random() * 35;
+ this.org =  new createText();
+ this.radius = this.org.org.length * 5 + Math.random() * 1;
  this.xOff = Math.random() * canvas.width - this.radius;
  this.yOff = Math.random() * canvas.height;
  this.distanceBetweenWaves = 50 + Math.random() * 40;
  this.count = canvas.height + this.yOff;
  this.color = 'white';
  this.lines = [];
- this.org =  new createText();
+
  this.org.bubble = this;
  this.popping = false;
  this.maxRotation = 85;
@@ -258,7 +262,7 @@ var createBubble = function() {
 
  this.resetPosition = function() {
 	 this.position = {x: 0, y: 0};
-	 this.radius = 25 + Math.random() * 35;
+	 this.radius = this.org.org.length * 5 + Math.random() * 1;
 	 this.xOff = Math.random() * canvas.width - this.radius;
 	 this.yOff = Math.random() * canvas.height;
 	 this.distanceBetweenWaves = 50 + Math.random() * 40;
@@ -296,15 +300,13 @@ var createBubble = function() {
 		 ctx.beginPath();
 		 ctx.arc(0, 0, this.radius, 0, Math.PI*2, false);
 		 ctx.stroke();
-	 } else {
-		 this.org.render();
 	 }
 
-
-
-
-
 	 ctx.restore();
+
+	 if (this.popping) {
+		  this.org.render();
+	 }
 
 	 // Draw the lines
 	 for (var a = 0; a < this.lines.length; a++) {
@@ -394,6 +396,11 @@ function createLine() {
 	 if(this.x === this.bubble.position.x) {
 		 this.endX = 0;
 	 }
+
+	 // ctx.fillStyle = "white";
+	 // ctx.font = "24px Cooper Hewitt";
+	 // ctx.fillText("hiiiiii", this.bubble.position.x - this.bubble.radius ,  this.bubble.position.y);
+
 	 ctx.lineTo(this.x + this.endX, this.y + this.endY);
 	 ctx.stroke();
  };
@@ -409,21 +416,17 @@ function createText() {
 	this.org = orgs.pop();
 	this.color = "white";
 	this.popping = false;
-	console.log("Creating text");
+	// console.log("Creating text");
 
 
 	this.render = function() {
 
-
-		console.log("X: ", this.bubble.position.x, "Y: ", this.bubble.position.y, this.org);
+		//console.log("X: ", this.bubble.position.x);
+		//console.log("M X: ", mouseOffset.x);
 		ctx.fillStyle = "white";
-		ctx.font = "24px Cooper Hewitt";
-		ctx.fillText(this.org, this.bubble.position.x  ,  this.bubble.position.y - 180);
-		ctx.rotate(this.rotation*Math.PI/180);
+		ctx.font = "16px Cooper Hewitt";
+		ctx.fillText(this.org, this.bubble.position.x - (this.org.length * 4 ),  this.bubble.position.y);
 		ctx.stroke();
-
-
-
 
 	}
 
