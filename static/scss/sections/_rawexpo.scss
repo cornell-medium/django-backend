@@ -12,169 +12,137 @@
 
 .section {
 	width:100%;
-}
-
-.content {
-	position: relative;
-	height: 100%;
-	overflow-x: hidden;
 
 }
 
+
+
+
+// whole page scss
 .raw {
 	position: relative ;
-	// background-color: black;
-	height: 100%;
-}
-
-.line {
-  width: 2px;
-  margin: auto;
-  position: absolute;
-	background-color: white;
-  overflow-y: hidden;
-	height: 100%;
-}
-.inner {
-  position: absolute;
-  width:100%;
-  height: 100%;
-  background: white;
-  box-shadow: 0px 0px 30px 20px white;
+	height: auto;
+	overflow-x: hidden;
+	width: 100%;
+	background-color: black;
+	color: white;
 }
 
 
-#line1 {
-	height: 100%;
-	left:89.5%;
-	top:0%;
-
-}
-
-#line2 {
-	left: 87%;
-	height: 90%;
-	top:10%;
-	opacity: .5;
-
-}
-
-#line3 {
-	left: 85.5%;
-	height: 90%;
-	top: 10%;
-	opacity: .3;
-
-}
-
+//header scss
 .header {
-	background-color:$mid-grey;
 	position: relative;
-	height: 100vh;
-	min-height: 650px;
+	// height: 100vh;
 	background-size: cover;
   background-repeat: no-repeat;
 
-	&__overlay {
-		height: 100%;
+	video {
+		width:100%;
+	}
+
+}
+
+
+
+// about raw scss
+.about {
+	width: 100%;
+	border-bottom: 30px white solid;
+	padding: 7% 5%;
+
+
+
+
+	&__text {
+		font-size: 18px;
 		width: 100%;
-		background-color: #030404;
-	}
-
-	&__pic {
-		width:60%;
-		height: 40%;
-		margin: auto auto;
-		position: absolute;
-		top: 45%; left: 50%;
-		transform: translate(-50%,-50%);
-		color:white;
-		background-size: cover;
-	  background-repeat: no-repeat;
-	}
-
-	&__title {
-		text-transform: uppercase;
-		font-style: italic;
-		font-size: 36px;
-		line-height: 30px;
-		top: 45%; left: 50%;
-	}
+		padding: 5px 0;
 
 
-	&__marrow {
-		width:auto;
-		margin: auto auto;
-		position: absolute;
-		top: 90%; right: 50%;
-		transform: translate(-50%,-50%);
-		color:white;
-		font-size: 48px;
-		font-weight: 600;
+		&__headings {
+			font-weight: 600;
+			font-size: 24px;
+			float: right;
 
-		p {
-			height: auto;
+
 		}
 
-		#scroll:hover {
-			cursor: pointer;
-			opacity: .9;
+		&__line {
+
+			width: 90%;
+			border-bottom: 2px solid white;
+			position: absolute;
+
 		}
 
-	}
+		@media (max-width: 600px) {
+			&__headings {
+				font-weight: 600;
+				font-size: 24px;
+				float: left !important;
 
+
+			}
+
+		}
+	}
 
 
 }
 
-.about {
+
+// senses scss
+.senses {
+	padding: 7% 5%;
+	display: block;
 	position: relative;
-	// margin-top: $xlarge-margin;
-	// margin-bottom: $xlarge- margin;
-	// background-size: cover;
-  // background-repeat: no-repeat;
-	width: 100%;
-	height:auto;
-	min-height: 950px;
-	color: #111;
+
+	border-bottom: 30px white solid;
+	// padding-bottom: 0;
+
+	&__imgs img {
+		margin-top: 5%;
+		width: 19.3%;
+		padding:0;
+		text-align: center;
+		border-right: 10px white solid;
+	}
+
+	h1 {
+		// padding-left: 3%;
+		// margin-top: 2%;
+		text-transform: uppercase;
+	}
+
+
+}
+
+
+// rsvp scss
+.rsvp {
+	// border-bottom: 30px white solid;
+	padding: 7% 7%;
+
+	a {
+		color: black;
+		background-color: white;
+		border-color: white;
+		margin-top: 5%;
+		padding: 10px 20px;
+
+	}
+
+	a:hover {
+		background-color: #d6d6d6;
+		border-color: #d6d6d6;
+	}
 
 	&__content {
-		padding: 2% 2% 2% 2%;
-		width:60%;
-		position: absolute;
-		top: 17%;
-		background-color: #FFF;
-		right: 8%;
-		margin: auto;
-	}
 
-	&__header {
-		font-size: 32px;
-		font-weight: 400;
-		font-family: 'Roboto';
-	}
-
-	&__accent {
-		height:10px;
-		width:100px;
-		background-color: $mid-grey;
-		margin-bottom: 30px;
-	}
-
-	&__text {
-		width:100%;
-		font-size: 14px;
-	}
-
-	@media (max-width: 980px) {
-		&__header {
-			line-height: 1.0;
-			margin-bottom: $large-margin;
+		&__right {
+			text-align: right;
 		}
 
-		&__text {
-			width: 100%;
-		}
 	}
 }
 
@@ -184,6 +152,7 @@
 	background-color: black;
 	padding-top: 5%;
 
+
 	&__content {
 		font-family: 'Roboto';
 		font-size: 24px;
@@ -192,366 +161,35 @@
 	}
 }
 
-.picture {
-	height:100vh;
-	min-height: 3000px;
+// interactive bubbles scss
+.bubbles {
 
-	// padding: 18% 10% 0% 0;
-	display: block;
-	position: relative;
-	background-color: #f7f7f7;
-	// background: linear-gradient(black, white, white, black);
+	padding:0;
+	width: 100%;
+	// height: 400px;
+	// position: absolute;
 
-
-	&__heading1 {
-		width: 66.4%;
-		height:276px;
-		h1 {
-			position: relative;
-			left: 3%;
-			top:21%;
-			font-size: 120px;
-			letter-spacing: 0;
-			font-weight: 600;
-
-		}
-
-
+	.instructions {
+	  position: absolute;
+	  font-weight: 500;
+	  font-size: 20px;
+		margin-left: 5%;
+		margin-top: 5%;
+	  color: #fff;
+	  border: 3px solid #fff;
+	  border-radius: 6px;
+	  padding: 8px;
 	}
 
-	&__heading2 {
-
-
-		width: 66.4%;
-		height:276px;
-		h6 {
-			position: relative;
-			text-align: right;
-			right: 2%;
-			top:3%;
-			font-size: 72px;
-			letter-spacing: 0;
-			 word-break: break-all;
-
-		}
-
-
-	}
-
-	&__img {
-
-		display: block;
-
-		float: left;
-		width: 100%;
-
-
-
-
-
-
-		&__img {
-			float: left;
-			width: 33.2%;
-			padding: 5px;
-		}
-
-
-
-		img {
-			width: 100%;
-			float: left;
-			filter: grayscale(1);
-
-		// padding: 2%;
-		// filter: grayscale(100%);
-		}
-
-		#last_pic {
-			width: 100%;
-		}
-
-	}
-
-
-}
-
-.banner {
-	position: relative;
-	// margin-top: $xlarge-margin;
-	// margin-bottom: $xlarge- margin;
-	height:100vh;
-	min-height: 400px;
-	background-color: black;
-
-	&__banner {
-		width:50%;
-		margin: auto;
-		margin-top: 100px;
-		left:25%;
-		position: absolute;
-		background-size: cover;
-	  background-repeat: no-repeat;
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-
-	}
-
-	&__rsvp {
-		top: 84%;
-		left: 45%;
-		position: absolute;
-		padding: 1% 1% 0 1%;
-		border: 1px solid white;
-
-		a {
-			color: white;
-			font-size: 30px;
-			font-style: italic;
-		}
-	}
-
-
-canvas {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-      }
-
-}
-
-@media (max-width: 600px) {
-
-
-	.picture {
-
-		min-height: 1800px;
-
-
-
-
-		&__img {
-
-			img {
-				width: 100%;
-				padding: 1%;
-				text-align: center;
-		}
-
-		}
-
-
-
-		}
-}
-
-@media (max-height: 650px) {
-	.header {
-
-		&__overlay {
-			height: 100%;
-			width: 100%;
-
-		}
-
-		&__pic {
-			width:60%;
-			height: 45%;
-			margin: auto auto;
-			position: absolute;
-			top: 45%; left: 45%;
-			// transform: translate(-50%,-50%);
-			color:white;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-
-		&__picture {
-
-			// min-height: 1800px;
-
-			&__heading1 {
-
-				h1 {
-					font-size: 24px;
-				}
-
-			}
-
-			&__heading2 {
-				h6 {
-					font-size: 12px;
-				}
-
-			}
-		}
-
-
-
-	}
-
-	.about {
-		min-height: 1100px;
-	}
-
-.picture {
-	width:100%;
-	margin: 0 auto;
-	// height: 1000px;
-
-
-
+	canvas {
+		border-bottom: 30px white solid;
 	}
 }
 
 
-@media (max-width: 450px) {
-
-
-	.header {
-		background-color:$mid-grey;
-		position: relative;
-		height: 100vh;
-		min-height: 650px;
-		background-size: cover;
-	  background-repeat: no-repeat;
-
-		&__overlay {
-			height: 100%;
-			width: 100%;
-		}
-
-		&__pic {
-			width:70%;
-			height: 15%;
-			margin: auto auto;
-			position: absolute;
-			top: 45%; left: 50%;
-			transform: translate(-50%,-50%);
-			color:white;
-			background-size: cover;
-		  background-repeat: no-repeat;
-		}
-
-
-		&__marrow {
-			width:auto;
-			margin: auto auto;
-			position: absolute;
-			top: 90%; right: 42%;
-			transform: translate(-50%,-50%);
-			color:white;
-			font-size: 48px;
-			font-weight: 600;
-
-		}
-
-
-
+@media (max-width: 650px) {
+	img {
+		width: 100% !important;
 	}
-
-
-	.about {
-		position: relative;
-		// margin-top: $xlarge-margin;
-		// margin-bottom: $xlarge- margin;
-		// background-size: cover;
-	  // background-repeat: no-repeat;
-		width: 100%;
-		height:auto;
-		min-height: 1800px;
-		color: #111;
-
-
-	}
-
-
-    .picture {
-			// padding-top: 50%;
-			width:100%;
-			margin: 0 auto;
-			// padding-left: 10%;
-			// min-height: 1200px;
-
-				&__img {
-					&__img {
-						width: 100%;
-					}
-				}
-
-
-				&__heading1 {
-					width: 100%;
-
-					h1 {
-						font-size: 24px;
-					}
-
-				}
-
-				&__heading2 {
-					width: 100%;
-					h6 {
-						font-size: 20px;
-					}
-
-				}
-			}
-
-
-
-
-
-
-
-		.banner {
-			position: relative;
-			// margin-top: $xlarge-margin;
-			// margin-bottom: $xlarge- margin;
-			height:100vh;
-			min-height: 400px;
-			background-color: black;
-			overflow: hidden;
-
-			&__banner {
-				width:90%;
-				margin: auto;
-				margin-top: 100px;
-				left:3.5%;
-				position: absolute;
-				background-size: cover;
-			  background-repeat: no-repeat;
-
-
-				img {
-					width: 100%;
-					height: auto;
-				}
-
-			}
-
-			&__rsvp {
-
-				position: absolute;
-				left: 40%;
-				top: 60%;
-
-
-				a {
-					color: white;
-					font-size: 30px;
-					font-style: italic;
-				}
-			}
-
-
-
-}
-
-
-
 
 }

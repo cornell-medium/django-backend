@@ -4,171 +4,452 @@
 {% block content %}
 
 <div class="raw">
-
-<div class="header section" style="background-color: #111;">
-<div class="header__overlay">
-<div class="header__pic" style="background-image: url('{% static 'imgs/raw_logo.png' %}');">
-	</div>
-</div>
-<div class="header__marrow">
-		<p>
-			<span id="m">m</span> <br/>
-
-		</p>
-	</div>
-	<div id="line1" class="line"><div class="inner"></div></div>
-	<div id="line2" class="line"><div class="inner"></div></div>
-	<div id="line3" class="line"><div class="inner"></div></div>
-</div>
-
-
-<!-- <script>
-$(document).ready(function() {
-  $("#scroll").on("click", function() {
-    $('html, body').animate({
-          scrollTop: $(".about").offset().top
-      }, 600);
-  });
-
-});
-</script> -->
-</div>
-<div class="about section" style="background-image: url('{% static 'imgs/raw_posters.jpg' %}');">
-<div class="about__content">
-	<div class="about__header">
-	what is raw expo?
-	</div>
-	<div class="about__accent"></div>
-	<div class="about__text">
-	In America we have a tendency to create a filter, a well-meaning deception, which hides the unpleasant and unlikeable. A common phenomenon is the use of “friendly” branding, the use of design to make products feel warm and approachable even if they are not.
-	Our focus is to look at the iterations of the design process which are often hidden or covered up.
-	<br/><br/>
-	We want to see the prototypes that were never released because they were not considered polished enough and the rough sketches that were thrown out because they might not be well received. These often hidden products reflect points of vulnerability in the creative process.
-	<br/><br/>
-	One may ask: what good will it do to expose this vulnerability?
-	<br/><br/>
-	Aside from stimulating critical thinking about the creative process it provides space for reflection: this way of thinking aims to guide the designer into elaborating on the idea that design holds intentions, purpose, and goals, giving concrete gestalt to a certain social purpose. Most importantly, however, the designer comes closer to understanding the complications which may arise if they overlook the “underexposed”.
-	<br/><br/>
-	RAW is an intellectually-stimulating dialogue for anyone who cares about the ethical and social implications of innovation and design, a call to action to take on social responsibility, NOT clubfest or career fair.
-
-	RAW is informative, NOT “just cool.”
-	RAW is interdisciplinary, NOT siloed.
-	RAW is a celebration of creativity, NOT just quarter cards and swag (although we will have them).
-	<br/>
-<!-- 	RAW EXPO will be held on <b>April 26th</b> from <b>7:30pm - 9:30pm</b> in <b>Milstein Dome.</b> -->
-<!-- 	<br/><a style="color:black; text-decoration:underline;" href="https://www.facebook.com/events/168087643848813/">RSVP</a> to see how your peers create. -->
-	</div>
-</div>
-</div>
-
-<div class="picture section">
-	<div class="picture__img">
-		<div  class='picture__img__img'><img id='pic_1' src='{% static 'imgs/raw/1.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_2' src='{% static 'imgs/raw/2.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_3' src='{% static 'imgs/raw/3.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_4' src='{% static 'imgs/raw/4.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_5' src='{% static 'imgs/raw/5.jpg' %}'/></div>
-		<div  class='picture__img__img'><img id='pic_6' src='{% static 'imgs/raw/6.jpg' %}'/></div>
-
-		<div id="chart"></div>
-		<div id="last_pic" class='picture__img__img'><img style="filter: none;" id='pic_21' src='{% static 'imgs/raw/21.jpg' %}'/></div>
+	<div class="header section fullscreen-background">
+	  <video autoplay loop muted class="fullscreen-background__video">
+	      <source src="{% static 'imgs/raw/rawgif.mov' %}">
+	  </video>
 	</div>
 
 
 
-</div>
-<div class="banner section" >
-	<div class="banner__banner">
-		<img src="{% static 'imgs/raw_banner.png' %}" />
-	</div>
-	<div class="banner__rsvp">
-		<a href="https://www.facebook.com/events/168087643848813/">RSVP</a>
-	</div>
-</div>
-<div class="medium section">
-	<div class="medium__content">
-		-m-
-	</div>
-</div>
-</div>
+	<div class="about section container-fluid">
+		<!-- where -->
+		<div class="about__text row">
+			<div class="col-md-2">
+				<span class="about__text__headings">
+					WHERE:
+				</span>
+			</div>
+			<div class="col-md-10" style="position: relative;">
+				MILSTEIN HALL
+				<div class="about__text__line"></div>
+			</div>
+		</div>
+		<!-- when -->
+		<div class="about__text row">
+			<div class="col-md-2">
+				<span class="about__text__headings">
+					WHEN:
+				</span>
+			</div>
+			<div class="col-md-10">
+				FRIDAY, 4/26/2019, 7-9PM
+				<div class="about__text__line"></div>
+			</div>
+		</div>
+		<!-- what -->
+		<br/><br/>
+		<div class="about__text row">
+			<div class="col-md-1">
 
+			</div>
+			<div class="col-md-10">
+				RAW Expo is an interactive space connecting attendees with organizations, project teams, and
+				creators all across Cornell campus. This year, we are focusing on the human sensory experience and
+				how the five senses are incorporated into the creative process.
+			</div>
+		</div>
+		</div>
+
+
+	<div class="senses section">
+		<h1>The V Senses</h1>
+		<p>The human experience is shaped by our senses, the tools we use to perceive information from the world,
+			allowing us to process, and then respond. As designers and creators, or even more broadly, problem-solvers,
+			we must focus on designing solutions that appeal to and interact with each of our senses. </p>
+		<div class="senses__imgs">
+			<img src="{% static 'imgs/raw/Raw-Ear.jpg' %}" style=" border-left: 10px white solid;" class="img-fluid"/>
+			<img src="{% static 'imgs/raw/Raw-Eyes.jpg' %}" class="img-fluid"/>
+			<img src="{% static 'imgs/raw/Raw-Hand.jpg' %}" class="img-fluid"/>
+			<img src="{% static 'imgs/raw/Raw-Mouth.jpg' %}" class="img-fluid"/>
+			<img src="{% static 'imgs/raw/Raw-Nose.jpg' %}" class="img-fluid"/>
+		</div>
+
+
+		</div>
+
+	<div id="chart" class="bubbles section">
+		<div class="instructions"> pop a bubble </div><canvas></canvas>
+	</div>
+	<div class="rsvp section" >
+
+		<div class="rsvp__content container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<h1>ORGANIZATIONS</h1>
+					<p> for organizations or speakers to register for our panel / EXPO</p>
+
+					<a href="#" class="btn btn-info">RSVP</a>
+					</div>
+				<div class="col-md-6 rsvp__content__right" >
+					<h1>ATTENDEES</h1>
+					<p> RSVP not neccessary, but people who do RSVP are entered in a raffle</p>
+					<a href="#" class="btn btn-info">RSVP</a>
+
+					</div>
+				</div>
+			</div>
+
+	</div>
+
+
+	<div class="medium section">
+
+		<div class="medium__content">
+			-m-
+		</div>
+	</div>
+	</div>
+
+</div>
 <!-- interactivity script -->
-<!-- taken from https://bl.ocks.org/philipcdavis/d0f35125d0ac936cee34151267b5057b -->
- <script src="https://d3js.org/d3.v4.min.js"></script>
+<!-- from: https://codepen.io/MarioD/pen/gWregQ -->
  <script>
-      (function() {
-        var width = window.innerWidth * 2,
-          height = window.innerHeight * 2;
 
-        var x = d3.scaleLinear()
-          .domain([0, 100])
-          .range([0, width]);
+// ---------
+// Functions
+// ---------
 
-        var y = d3.scaleLinear()
-          .domain([0, 100])
-          .range([0, height]);
+var orgs = [
+								"CUAir",
+								"Steav Kim",
+								"Troy Mock",
+								"TIPTOE&",
+								"Life Changing Labs",
+								"Ezra Box",
+								"Cornell Business Analytics",
+								"Red Jacket Orchards",
+								"Cornell Daily Sun",
+								"Dragon Day 2019",
+								"The Collective Liberation",
+								"Engineers for Sustainable World",
+								"Design Connect",
+								"Cornell Mars Rover",
+								"Sabin Design Lab",
+								"Cornell Steel Bridge",
+								"Big Red//Hacks",
+								"Engineers Without Borders",
+								"AguaClara",
+								"Cornell Cup Robotics",
+								"Cornell iGem",
+								"Cornell University Sustainable Design",
+								"Cornell AppDev",
+								"The Straight Edge",
+								"Guac Magazine",
+								"Cornell Sustainability Consultants",
+								"Art Major Organization",
+								"AAP Association",
+								"CUAUV",
+								"Cornell Rocketry Team",
+								"Thread Magazine",
+								"Cue (DTI subteam)",
+								"Absolute A Capella ",
+								"Unspecified Co. ",
+]
 
-        var colors = ["grey", "#bfafa0", "#B79CB2", "#CFB492", "#C69C9C", "#b8bfa3", "black"];
-        var colorScale = d3.scaleQuantize().domain([0,1]).range(colors);
+var canvas = document.querySelector('canvas');
+	 canvas.width = document.body.clientWidth;
+	 canvas.height = document.body.clientHeight;
+console.log(canvas.width, canvas.height);
+var ctx = canvas.getContext('2d');
 
-        var data = d3.range(90).map(function() {
-          var dataObject =  {
-            x: Math.random() * 100,
-            y: Math.random() * 100,
-            yv: Math.random() * 0.4,
-            size: (Math.random() * 75) + 25,
-            color: colorScale(Math.random())
-          };
-
-          return dataObject;
-        });
-
-        var canvas = d3.select("#chart").append("canvas")
-          .attr("width", width)
-          .attr("height", height)
-          .attr("id", "canvas");
-
-        // node returns first dom element in a selection
-        var context = canvas.node().getContext("2d");
-
-        d3.select(window).on('resize', function(){
-
-          var htmlCanvas = document.getElementById('canvas');
-          var context = htmlCanvas.getContext('2d');
-          width = window.innerWidth * 2;
-          htmlCanvas.width = width;
-          height = window.innerHeight * 2;
-          htmlCanvas.height = height;
-          x = d3.scaleLinear()
-              .domain([0, 100])
-              .range([0, width]);
-
-          y = d3.scaleLinear()
-              .domain([0, 100])
-              .range([0, height]);
-        });
+var count = canvas.height;
+var bubbles = [];
+var bubbleCount = orgs.length;
+var bubbleSpeed = 1.5;
+var popLines = 6;
+var popDistance = 60;
+var mouseOffset = {
+ x: 180,
+ y: 0
+};
 
 
-        // the timer method calls a function repeatedly
-        d3.timer(function() {
-          context.clearRect(0, 0, width, height);
 
-          data.forEach(function(d) {
-            d.y -= d.yv;
+// --------------
+// Animation Loop
+// --------------
 
-            // Recycle old circles
-            if(d.y < (0 - d.size) ) {
-              d.y = 100 + d.size;
-            }
+function animate() {
 
-             context.fillStyle = d.color;
-             context.beginPath();
-             context.arc(x(d.x), y(d.y), d.size, 0, 2 * Math.PI);
 
-             context.fill();
-           });
-        });
-      })();
+
+ // ------------
+ // Clear Canvas
+ // ------------
+
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+
+ // ------------
+ // Draw Bubbles
+ // ------------
+
+ ctx.beginPath();
+ for (var i = 0; i < bubbles.length; i++) {
+	 // first num = distance between waves
+	 // second num = wave height
+	 // third num = move the center of the wave away from the edge
+	 bubbles[i].position.x = Math.sin(bubbles[i].count/bubbles[i].distanceBetweenWaves) * 50 + bubbles[i].xOff;
+	 bubbles[i].position.y = bubbles[i].count;
+	 bubbles[i].render();
+
+	 if(bubbles[i].count < 0 - bubbles[i].radius) {
+		 bubbles[i].count = canvas.height + bubbles[i].yOff;
+	 } else {
+		 bubbles[i].count -= bubbleSpeed;
+	 }
+ }
+
+ // ---------------
+ // On Bubble Hover
+
+ // ---------------
+
+ for (var i = 0; i < bubbles.length; i++) {
+	 if(mouseOffset.x > bubbles[i].position.x - bubbles[i].radius && mouseOffset.x < bubbles[i].position.x + bubbles[i].radius) {
+		 if(mouseOffset.y > bubbles[i].position.y - bubbles[i].radius && mouseOffset.y < bubbles[i].position.y + bubbles[i].radius) {
+			 for (var a = 0; a < bubbles[i].lines.length; a++) {
+				 popDistance = bubbles[i].radius * 0.5;
+				 bubbles[i].lines[a].popping = true;
+				 bubbles[i].org.popping = true;
+				 bubbles[i].popping = true;
+			 }
+		 }
+	 }
+ }
+
+ window.requestAnimationFrame(animate);
+}
+
+window.requestAnimationFrame(animate);
+
+
+
+// ------------------
+// Bubble Constructor
+// ------------------
+
+var createBubble = function() {
+ this.position = {x: 0, y: 0};
+ this.radius = 25 + Math.random() * 35;
+ this.xOff = Math.random() * canvas.width - this.radius;
+ this.yOff = Math.random() * canvas.height;
+ this.distanceBetweenWaves = 50 + Math.random() * 40;
+ this.count = canvas.height + this.yOff;
+ this.color = 'white';
+ this.lines = [];
+ this.org =  new createText();
+ this.org.bubble = this;
+ this.popping = false;
+ this.maxRotation = 85;
+ this.rotation = Math.floor(Math.random() * (this.maxRotation - (this.maxRotation * -1))) + (this.maxRotation * -1);
+ this.rotationDirection = 'forward';
+
+ // Populate Lines
+ for (var i = 0; i < popLines; i++) {
+	 var tempLine = new createLine();
+			 tempLine.bubble = this;
+			 tempLine.index = i;
+
+	 this.lines.push(tempLine);
+ }
+
+ this.resetPosition = function() {
+	 this.position = {x: 0, y: 0};
+	 this.radius = 25 + Math.random() * 35;
+	 this.xOff = Math.random() * canvas.width - this.radius;
+	 this.yOff = Math.random() * canvas.height;
+	 this.distanceBetweenWaves = 50 + Math.random() * 40;
+	 this.count = canvas.height + this.yOff;
+	 this.popping = false;
+ }
+
+ // Render the circles
+ this.render = function() {
+	 if(this.rotationDirection === 'forward') {
+		 if(this.rotation < this.maxRotation) {
+			 this.rotation++;
+		 } else {
+			 this.rotationDirection = 'backward';
+		 }
+	 } else {
+		 if(this.rotation > this.maxRotation * -1) {
+			 this.rotation--;
+		 } else {
+			 this.rotationDirection = 'forward';
+		 }
+	 }
+
+	 ctx.save();
+	 ctx.translate(this.position.x, this.position.y);
+	 ctx.rotate(this.rotation*Math.PI/180);
+
+	 if(!this.popping) {
+		 ctx.beginPath();
+		 ctx.strokeStyle = 'white';
+		 ctx.lineWidth = 1;
+		 ctx.arc(0, 0, this.radius - 3, 0, Math.PI*1.5, true);
+		 ctx.stroke();
+
+		 ctx.beginPath();
+		 ctx.arc(0, 0, this.radius, 0, Math.PI*2, false);
+		 ctx.stroke();
+	 } else {
+		 this.org.render();
+	 }
+
+
+
+
+
+	 ctx.restore();
+
+	 // Draw the lines
+	 for (var a = 0; a < this.lines.length; a++) {
+		 if(this.lines[a].popping) {
+			 if(this.lines[a].lineLength < popDistance && !this.lines[a].inversePop) {
+				 this.lines[a].popDistance += 0.06;
+
+
+			 } else {
+				 if(this.lines[a].popDistance >= 0) {
+					 this.lines[a].inversePop = true;
+					 this.lines[a].popDistanceReturn += 1;
+					 this.lines[a].popDistance -= 0.03;
+				 } else {
+					 this.lines[a].resetValues();
+					 this.resetPosition();
+				 }
+			 }
+
+
+			 this.lines[a].updateValues();
+			 this.lines[a].render();
+		 }
+	 }
+ }
+}
+
+
+
+// ----------------
+// Populate Bubbles
+// ----------------
+
+for (var i = 0; i < bubbleCount; i++) {
+ var tempBubble = new createBubble();
+
+ bubbles.push(tempBubble);
+}
+
+
+
+// ----------------
+// Line Constructor
+// ----------------
+
+function createLine() {
+ this.lineLength = 0;
+ this.popDistance = 0;
+ this.popDistanceReturn = 0;
+ this.inversePop = false; // When the lines reach full length they need to shrink into the end position
+ this.popping = false;
+
+ this.resetValues = function() {
+	 this.lineLength = 0;
+	 this.popDistance = 0;
+	 this.popDistanceReturn = 0;
+	 this.inversePop = false;
+	 this.popping = false;
+
+	 this.updateValues();
+ }
+
+ this.updateValues = function() {
+	 this.x = this.bubble.position.x + (this.bubble.radius + this.popDistanceReturn) * Math.cos(2 * Math.PI * this.index / this.bubble.lines.length);
+	 this.y = this.bubble.position.y + (this.bubble.radius + this.popDistanceReturn) * Math.sin(2 * Math.PI * this.index / this.bubble.lines.length);
+	 this.lineLength = this.bubble.radius * this.popDistance;
+	 this.endX = this.lineLength;
+	 this.endY = this.lineLength;
+ }
+
+ this.render = function() {
+	 this.updateValues();
+
+	 ctx.beginPath();
+	 ctx.strokeStyle = 'white';
+	 ctx.lineWidth = 2;
+	 ctx.moveTo(this.x, this.y);
+	 if(this.x < this.bubble.position.x) {
+		 this.endX = this.lineLength * -1;
+	 }
+	 if(this.y < this.bubble.position.y) {
+		 this.endY = this.lineLength * -1;
+	 }
+	 if(this.y === this.bubble.position.y) {
+		 this.endY = 0;
+	 }
+	 if(this.x === this.bubble.position.x) {
+		 this.endX = 0;
+	 }
+	 ctx.lineTo(this.x + this.endX, this.y + this.endY);
+	 ctx.stroke();
+ };
+}
+
+
+
+// ----------------
+// Text Constructor
+// ----------------
+
+function createText() {
+	this.org = orgs.pop();
+	this.color = "white";
+	this.popping = false;
+	console.log("Creating text");
+
+
+	this.render = function() {
+
+
+		console.log("X: ", this.bubble.position.x, "Y: ", this.bubble.position.y, this.org);
+		ctx.fillStyle = "white";
+		ctx.font = "24px Cooper Hewitt";
+		ctx.fillText(this.org, this.bubble.position.x  ,  this.bubble.position.y - 180);
+		ctx.rotate(this.rotation*Math.PI/180);
+		ctx.stroke();
+
+
+
+
+	}
+
+
+}
+
+// ---------------
+// Event Listeners
+// ---------------
+
+canvas.addEventListener('mousemove', mouseMove);
+
+function mouseMove(e) {
+ mouseOffset.x = e.offsetX;
+ mouseOffset.y = e.offsetY;
+}
+
+window.addEventListener('resize', function() {
+ canvas.width = document.body.clientWidth;
+ canvas.height = document.body.clientHeight;
+});
+
+
+// ---------------
+// Event Listeners
+// ---------------
 
     </script>
 
