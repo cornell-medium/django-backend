@@ -1,3 +1,109 @@
+body{
+  margin: 0;
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  overflow-x: auto;
+  background: #fff;
+}
+h1, h2, h3{
+  margin:0;
+}
+h1{
+  font-size: 250%;
+  font-weight: bold;
+  color:black;
+  width:auto;
+}
+h2{
+  font-weight: lighter;
+  color:white;
+}
+h3{
+  font-size: 100%;
+  font-weight: bold;
+  color:black;
+}
+.main{
+  max-width: 85%;
+  margin:auto;
+}
+.login{
+  float:right;
+  border: 2px solid black;
+  padding: 4px;
+  margin:30px 0;
+}
+.name{
+  font-size: 120%;
+}
+.major{
+  font-size: 100%;
+}
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+  /* width:100vw; */
+  justify-content: space-between;
+  clear:both;
+}
+.profile, .info, .profile img{
+  width: 250px;
+  height: 250px;
+}
+
+.square-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  position: relative;
+  flex-basis: calc(20% - 10px);
+  margin: 5px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.square::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.square .content {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.profile img{
+  position: absolute;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.info:hover{
+  transition: all 0.8s ease;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+.detail{
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+
 .creators-nav h1{
     text-transform: uppercase;
     font-weight: bold;
@@ -191,3 +297,77 @@
     font-style: italic;
   }
 }
+
+
+/***** Sign in ******/
+#sign_in {
+  width: 50%;
+}
+.creators_signin_left {
+  height: 100vh;
+  background: white;
+  float: left;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.creators_signin_right {
+  height: 100vh;
+  background: black;
+  float: left;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  h1 {
+    color: white;
+    font-family: 'Cooper Hewitt', "Helvetica Neue", helvetica, arial, sans-serif;
+  }
+
+  div {
+    padding-left: 5%;
+  }
+
+  a {
+    color: white !important;
+  }
+}
+
+.creators_signin_left div {
+  padding-right: 5%;
+}
+
+.creators_signin_left h1 {
+  font-size: 5em;
+  font-family: 'Cooper Hewitt', "Helvetica Neue", helvetica, arial, sans-serif;
+  font-weight: bold;
+}
+
+#login_form {
+  margin: 7% 0;
+  input {
+    background: black;
+    border: 1.5px solid white;
+    padding: 4% 4% 2% 4%;
+    width: 130%;
+    margin-bottom: 7%;
+    font-family: 'Cooper Hewitt' , "Helvetica Neue", helvetica, arial, sans-serif;
+    color: white;
+  }
+
+  input:focus, input:active {
+    outline: none !important; 
+    background: white;
+    color: black;
+  }
+
+  #login_submit {
+    padding: 3% 15%;
+    font-family: 'Cooper Hewitt', "Helvetica Neue", helvetica, arial, sans-serif;
+    font-weight: bold;
+  }
+}
+

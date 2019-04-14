@@ -72,3 +72,15 @@ def teams(request):
 def creators(request):
     context = {}
     return render(request, 'sections/creatorshome.html', context)
+
+def creators_new(request):
+    context = {}
+    return render(request, 'sections/creatorsnewproject.html', context)
+
+def creators_signin(request):
+    context = {}
+    return render(request, 'sections/creatorssignin.html', context)
+
+def creators_main(request):
+    context = {}
+    return render(request, 'sections/creatorsmain.html', context)

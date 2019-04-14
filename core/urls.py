@@ -27,4 +27,7 @@ urlpatterns = [
     url(r'^teams/$', views.teams, name='teams'),
     url(r'^admin/', admin.site.urls),
     url(r'^creators/$', views.creators, name='creators'),
+    url(r'^creators_new/$', views.creators_new, name='creators_new'),
+    url(r'^creators_main/$', views.creators_main, name='creators_main'),
+    url(r'^creators_signin/$', views.creators_signin, name='creators_signin'),
 ]
