@@ -31,16 +31,13 @@ def projects(request):
 
         projects.append(project)
 
-    context = 
-    {
-    'projects': projects
-    }
+    context = {'projects': projects}
     render(request, 'sections/projects.html', context)
 
 def profile(request):
-    render(request, 'sections/profile.html', context)
+    render(request, 'sections/profile.html', {})
 
 def account(request):
-    render(request, 'sections/account.html', context)
+    render(request, 'sections/account.html', {})
 
 

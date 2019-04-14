@@ -1,7 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Profile(models.Model):
-    acc = models.OneToOneField(Account)
+    acc = models.OneToOneField(User)
     name = models.CharField(max_length=70)
     bio = models.TextField()#not sure how exactly to be represented
     year = models.CharField(max_length = 10)

@@ -11,6 +11,11 @@ def index(request):
     return render(request, 'sections/index.html', context)
 
 
+def creators(request):
+    context = {}
+    return render(request, 'sections/creatorshome.html', context)
+
+
 def events(request):
     query = Event.objects.order_by('date').all().reverse()
 
@@ -73,7 +78,3 @@ def rawexpo(request):
 def teams(request):
     context = {}
     return render(request, 'sections/teams.html', context)
-
-def creators(request):
-    context = {}
-    return render(request, 'sections/creatorshome.html', context)
