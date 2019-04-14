@@ -20,11 +20,13 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^auth/', include('social_django.urls', namespace='social')),
+    url(r'^creators/$', views.creators, name='creators'),
     url(r'^events/$', views.events, name='events'),
     url(r'^designpanel/$', views.designpanel, name='designpanel'),
     url(r'^joinus/$', views.joinus, name='joinus'),
+    url(r'^login/$', views.login, name='login'),
     url(r'^raw/$', views.rawexpo, name='rawexpo'),
     url(r'^teams/$', views.teams, name='teams'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^creators/$', views.creators, name='creators'),
 ]
