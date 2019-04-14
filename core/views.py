@@ -11,6 +11,11 @@ def index(request):
     return render(request, 'sections/index.html', context)
 
 
+def creators(request):
+    context = {}
+    return render(request, 'sections/creatorshome.html', context)
+
+
 def events(request):
     query = Event.objects.order_by('date').all().reverse()
 
@@ -55,6 +60,11 @@ def designpanel(request):
     return render(request, 'sections/designpanel.html', {})
 
 
+def login(request):
+    context = {}
+    return render(request, 'sections/login.html', context)
+
+
 def joinus(request):
     context = {}
     return render(request, 'sections/joinus.html', context)
@@ -67,6 +77,7 @@ def rawexpo(request):
 
 def teams(request):
     context = {}
+<<<<<<< HEAD
     return render(request, 'sections/teams.html', context)
 
 def creators(request):
@@ -84,3 +95,6 @@ def creators_signin(request):
 def creators_main(request):
     context = {}
     return render(request, 'sections/creatorsmain.html', context)
+=======
+    return render(request, 'sections/teams.html', context)
+>>>>>>> 1a9daf4c9ac481ea1ff28ff238d988ccde70d6cc
