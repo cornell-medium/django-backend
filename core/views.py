@@ -16,6 +16,21 @@ def creators(request):
     return render(request, 'sections/creatorshome.html', context)
 
 
+def creators_new(request):
+    context = {}
+    return render(request, 'sections/creatorsnewproject.html', context)
+
+
+def creators_signin(request):
+    context = {}
+    return render(request, 'sections/creatorssignin.html', context)
+
+
+def creators_main(request):
+    context = {}
+    return render(request, 'sections/creatorsmain.html', context)
+
+
 def events(request):
     query = Event.objects.order_by('date').all().reverse()
 
@@ -77,24 +92,4 @@ def rawexpo(request):
 
 def teams(request):
     context = {}
-<<<<<<< HEAD
     return render(request, 'sections/teams.html', context)
-
-def creators(request):
-    context = {}
-    return render(request, 'sections/creatorshome.html', context)
-
-def creators_new(request):
-    context = {}
-    return render(request, 'sections/creatorsnewproject.html', context)
-
-def creators_signin(request):
-    context = {}
-    return render(request, 'sections/creatorssignin.html', context)
-
-def creators_main(request):
-    context = {}
-    return render(request, 'sections/creatorsmain.html', context)
-=======
-    return render(request, 'sections/teams.html', context)
->>>>>>> 1a9daf4c9ac481ea1ff28ff238d988ccde70d6cc
