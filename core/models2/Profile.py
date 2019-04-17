@@ -9,7 +9,7 @@ class Profile(models.Model):
     major = models.CharField(max_length=100) #some sort of enum thingy?
     college = models.CharField(max_length=100) #some sort of enum thingy?
     grad_date = models.DateTimeField(blank=True, null=True)
-    link = models.CharField(max_length=100)
+    link = models.CharField(max_length=200)
 
 
 def __str__(self):
