@@ -22,6 +22,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'core.apps.CoreConfig',
+    'creators.apps.CreatorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,9 +47,6 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'static/html'
-        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,4 +1,6 @@
 from django.db import models
+from tag import Tag
+from image import Image
 
 
 class Project(models.Model):
