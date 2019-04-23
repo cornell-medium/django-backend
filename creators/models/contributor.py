@@ -1,6 +1,6 @@
 from django.db import models
-from profile import Profile
-from project import Project
+from .profile import Profile
+from .project import Project
 
 class Contributor(models.Model):
     profile_id = models.ForeignKey(to=Profile, related_name="profiles", null=True, blank=True)
