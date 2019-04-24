@@ -129,7 +129,7 @@ h3{
   display: flex;
 }
 .creators_preview {
-  width: 36vw;
+  width: 35vw;
 }
 .creator_preview_name {
   width: 100%;
@@ -304,7 +304,7 @@ h3{
   width: 50%;
 }
 .creators_signin_left {
-  height: 100vh;
+  height: calc(100vh - 81px);
   background: white;
   float: left;
   width: 50%;
@@ -314,10 +314,10 @@ h3{
 }
 
 .creators_signin_right {
-  height: 100vh;
   background: black;
   float: left;
   width: 50%;
+  height: calc(100vh - 81px);
   display: flex;
   align-items: center;
   justify-content: flex-start;

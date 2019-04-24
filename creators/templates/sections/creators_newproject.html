@@ -1,68 +1,35 @@
+{% extends "components/creators_base.html" %}
 {% load static %}
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-	<script src="{% static 'js/index.js' %}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
- 	<meta charset="utf-8">
- 	<title>Creators of Cornell</title>
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'imgs/favicon.ico' %}" >
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% block resources %}
-    {% endblock %}
-</head>
-<body id="creators_new_project">
-    <div class="creators-nav">
-				<div><h1>Creators of Cornell</h1></div>
-			</div>
-    <div class="creators_new_project">
-			<h1>Create a Project</h1>
-			<form>
-				Title <br>
-				<input type="text" name="projectname"><br><br>
 
-				Timeframe <br>
-				<input type="month" name="startdate" class="input-half"> &nbsp; - &nbsp; <input type="month" name="enddate" class="input-half">
-				<br><br>
-
-				Collaborators <br>
-				<input type="text" name="collab0" placeholder="Name or NetID">
-				<br>
-				<button id="add_collab">Add More</button>
-				<br><br>
-
-				Overview<br>
-				<textarea name="overview" placeholder = "250 words max"></textarea>
-				<br><br>
-
-				Add a Project Image for Portfolio Page<br>
-				<button id="add_collab">Add Image</button>
-			</form>
-
-			<form>
-
-			</form>
-		{% block content %}
-		
-        {% endblock %}
-    </div>
-</body>
-<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-<script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-{% block scripts %}
+{% block resources %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 {% endblock %}
-<!-- <script>feather.replace();</script> -->
 
+{% block content %}
+<div id="creators_new_project">
+    <div class="creators_new_project">
+		<h1>Create a Project</h1>
+		<form>
+			Title <br>
+			<input type="text" name="projectname"><br><br>
 
-<script>
-	
-</script>
-</html>
+			Timeframe <br>
+			<input type="month" name="startdate" class="input-half"> &nbsp; - &nbsp; <input type="month" name="enddate" class="input-half">
+			<br><br>
+
+			Collaborators <br>
+			<input type="text" name="collab0" placeholder="Name or NetID">
+			<br>
+			<button id="add_collab">Add More</button>
+			<br><br>
+
+			Overview<br>
+			<textarea name="overview" placeholder = "250 words max"></textarea>
+			<br><br>
+
+			Add a Project Image for Portfolio Page<br>
+			<button id="add_collab">Add Image</button>
+		</form>
+    </div>
+</div>
+{% endblock %}

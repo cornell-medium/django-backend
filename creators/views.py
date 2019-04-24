@@ -11,7 +11,7 @@ def creators(request):
 
 def creators_new(request):
     context = {}
-    return render(request, 'sections/creators_project.html', context)
+    return render(request, 'sections/creators_newproject.html', context)
 
 
 def creators_signin(request):
