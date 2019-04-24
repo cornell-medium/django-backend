@@ -1,0 +1,45 @@
+{% extends "components/creators_base.html" %}
+{% load static %}
+
+{% block resources %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+{% endblock %}
+
+{% block full-width-content %}
+<div class="creators_new_profile">
+    <div class="creators_profile_left">
+        <div>
+            <h1>Let's Edit</h1>
+            <h1>Your Profile</h1>
+        </div>
+
+    </div>
+    <div class="creators_profile_right">
+        <div class="form">
+            <form id="profile_form">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter Name">
+
+                <label>Year / Major</label>
+                <div class="year_major">
+                    <input type="text" name="year" class="input-left-half" placeholder="Enter Year">
+                    &nbsp; <input type="text" name="major" class="input-right-half" placeholder="Enter Major">
+                </div>
+
+                <label>Description</label>
+                <textarea name="description" placeholder="250 words max" ></textarea>
+
+                <label>Projects</label>
+                <button class="btn project_btn btn_full_width">The JellyFish</button><br>
+                <button class="btn project_btn btn_full_width">Waterbottle iOS innovation</button><br>
+                <button class="btn project_btn btn_full_width">Chess Game in Space</button><br>
+                <button class="btn project_btn btn_full_width">Tindr for Dogs</button>
+                <button class="btn project_btn btn_full_width">Create New Project...</button>
+
+                <label>Publish Profile</label>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

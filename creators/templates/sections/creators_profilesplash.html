@@ -1,0 +1,25 @@
+{% extends "components/creators_base.html" %}
+{% load static %}
+
+{% block resources %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+{% endblock %}
+
+{% block full-width-content %}
+<div class="creators_profile_splash">
+    <a href="google.com">
+        <div class="edit_profile">
+            <div class="splash_text_wrapper">
+                <h1>Edit Profile</h1>
+            </div>
+        </div>
+    </a>
+    <a href="google.com">
+        <div class="add_projects">
+                <div class="splash_text_wrapper">
+                    <h1>Add a Project</h1>
+                </div>
+        </div>
+    </a>
+</div>
+{% endblock %}

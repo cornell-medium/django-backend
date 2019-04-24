@@ -5,30 +5,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 {% endblock %}
 
-{% block content %}
-<div id="creators_new_project">
+{% block full-width-content %}
+<div class="creators_new_project_wrapper">
     <div class="creators_new_project">
 		<h1>Create a Project</h1>
 		<form>
-			Title <br>
-			<input type="text" name="projectname"><br><br>
+			<label>Title</label>
+			<input type="text" name="projectname" placeholder="Enter Project Title">
 
-			Timeframe <br>
+			<label>Timeframe</label>
 			<input type="month" name="startdate" class="input-half"> &nbsp; - &nbsp; <input type="month" name="enddate" class="input-half">
-			<br><br>
 
-			Collaborators <br>
-			<input type="text" name="collab0" placeholder="Name or NetID">
-			<br>
-			<button id="add_collab">Add More</button>
-			<br><br>
+			<label>Collaborators</label>
+			<input type="text" name="collab0" placeholder="Enter Name or NetID">
+			<button class="btn" id="add_collab">Add More</button>
 
-			Overview<br>
+			<label>Overview</label>
 			<textarea name="overview" placeholder = "250 words max"></textarea>
-			<br><br>
 
-			Add a Project Image for Portfolio Page<br>
-			<button id="add_collab">Add Image</button>
+			<label>Key Image</label>
+			<button class="btn" id="add_collab">Add Image</button>
+
+			<label>Publish Project</label>
+			<button class="btn" type="submit">Submit</button>
 		</form>
     </div>
 </div>

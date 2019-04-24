@@ -5,27 +5,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 {% endblock %}
 
-{% block content %}
-<div id="creators_new_project">
-	<div class="creators_signin_left">
+{% block full-width-content %}
+<div>
+	<div class="creators_profile_left">
 		<div>
 			<h1>Create.</h1>
 			<h1>Discover.</h1>
 			<h1>Explore.</h1>
 		</div>
 	</div>
-	<div class="creators_signin_right">
+	<div class="creators_profile_right">
 		<div>
 			<h1>Sign In</h1>
-			<form id="login_form">
-				<input type="text" name="username" placeholder="Username"><br>
-				<input type="text" name="password" placeholder="Password"><br>
-				
-				<button id="login_submit">Login</button>
-			</form>
-			<p>
-				<a href="">New Account? Sign up Here</a>
-			</p>
+			<a class="btn" href="google.com">
+				Authorize with Google
+			</a>
 		</div>
 	</div>
 </div>
