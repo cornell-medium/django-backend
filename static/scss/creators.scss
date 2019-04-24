@@ -523,3 +523,162 @@ form {
         padding-right: 20px;
     }
 }
+
+/***** Project Page *****/
+.creators_project {
+    h1,h2,h3,h4,h5,h6,p{
+        font-weight: bold;
+        font-style: normal;
+        color:black;
+        margin:0;
+    }
+    h1{
+        font-size: 250%;
+    }
+    h2{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 36px;
+        font-weight: 600;
+        color:white;
+    }
+    h4{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    h5{
+        font-size: 130%;
+        color:white;
+        font-weight: 400;
+    }
+    h6{
+        font-size: 18px;
+        font-weight: 500;
+        color:white;
+    }
+    p{
+        font-weight: lighter;
+        font-size: 16px;
+    }
+    .main{
+        max-width: 85%;
+        margin:auto;
+    }
+    .creators{
+        float:left;
+        margin:25px 0;
+    }
+    .back{
+        float:right;
+        border: 2px solid black;
+        padding: 4px;
+        margin:30px 0;
+    }
+    .team-detail span{
+        float: right;
+        vertical-align: bottom;
+        position:absolute;
+    }
+    
+    .proj-outline{
+        max-width: 90%;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .proj-info{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+    .proj-name{
+        margin: 50px 0;
+        padding: 20px 15px 15px 15px;
+        background-color: black;
+        text-align: center;
+        clear:both;
+    }
+    .date, .overview, .team, .process-detail{
+        background-color: black;
+
+        p {
+            color: white;
+            padding: 20px;
+        }
+    }
+    .date, .overview, .team {
+        text-align: center;
+        min-width: 150px;
+        max-width: 150px;
+        min-height: 150px;
+        max-height: 150px;
+        position: relative;
+    }
+    .date h6, .overview h6, .team h6{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .date-detail, .overview-detail {
+        position: absolute;
+        left: 165px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .team-detail{
+        margin: 0 15px;
+    }
+    .team-detail img{
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        vertical-align: middle;
+    }
+    .process-img img{
+        max-width:100%;
+        max-height: 500px;
+        height:auto;
+        margin:0;
+    }
+    .process-left, .process-right{
+        display: flex;
+        flex-direction: row;
+        margin: 75px 0;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: right;
+
+        &:first-child {
+            margin-top: 65px;
+        }
+    }
+    .process-info{
+        max-width: 50%;
+        margin: 0 10px;
+    }
+    .process-detail{
+        background-color:black;
+        color:white;
+        padding:10px;
+        margin:0;
+        word-wrap:break-word;
+    }
+    .process-header {
+        color:black;
+        padding:10px;
+        margin-bottom:10px;
+        border-bottom:3px solid;
+        text-align: left;
+    }
+    .process-right .process-header{
+        text-align: right;
+    }    
+}
