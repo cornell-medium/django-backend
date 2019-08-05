@@ -133,7 +133,7 @@ ul {
 	flex-wrap: wrap;
 	padding: 40px 60px;
 	justify-content: space-around;
-	background-image: url("mediumbckgrnd.jpg");
+	background-image: url('{% static 'imgs/mediumbckgrnd.jpg' %}');
 	background-repeat: repeat;
 	justify-content: initial;
 }
