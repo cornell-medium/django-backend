@@ -69,6 +69,6 @@ def teams(request):
     context = {}
     return render(request, 'sections/teams.html', context)
 
-def teams(request):
+def about(request):
     context = {}
     return render(request, 'sections/about.html', context)
