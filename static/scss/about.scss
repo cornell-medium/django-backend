@@ -120,7 +120,6 @@ ul {
 	flex-wrap: wrap;
 	padding: 40px 60px;
 	justify-content: space-around;
-	background-image: url("story.jpg");
 	background-color: $background_color_3;
 	background-blend-mode: lighten;
 	background-repeat: no-repeat;
@@ -133,7 +132,6 @@ ul {
 	flex-wrap: wrap;
 	padding: 40px 60px;
 	justify-content: space-around;
-	background-image: url('{% static 'imgs/mediumbckgrnd.jpg' %}');
 	background-repeat: repeat;
 	justify-content: initial;
 }
