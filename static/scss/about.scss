@@ -1,7 +1,6 @@
 $color_1: #292b2c;
 $color_2: white;
 $color_3: black;
-$font_family_1: 'CooperHewitt';
 $background_color_1: black;
 $background_color_2: white;
 $background_color_3: rgba(255, 255, 255, 0.2);
@@ -17,8 +16,8 @@ $background_color_3: rgba(255, 255, 255, 0.2);
     src: url("CooperHewitt-Bold.otf") format("opentype");
 } */
 html {
-	font-family: $font_family_1;
-	font-weight: 300;
+	font-family: 'Cooper Hewitt' !important;
+	font-weight: 300 !important;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -37,50 +36,50 @@ body {
 h1 {
 	margin: 0;
 	line-height: 1.5;
-	font-weight: normal;
 	font-size: 1.5vw;
 	color: $color_2;
+    font-weight: 300;
 }
 h2 {
 	margin: 0;
 	line-height: 1.5;
-	font-weight: normal;
 	letter-spacing: .3vw;
 	font-size: 3vw;
 	line-height: 1.1;
 	font-weight: bold;
 	text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
 	color: $color_2;
+    font-weight: 300;
 }
 h3 {
 	margin: 0;
 	line-height: 1.5;
-	font-weight: normal;
 	font-size: 1.6vw;
+    font-weight: 300 !important;
 }
 h4 {
 	margin: 0;
 	line-height: 1.5;
-	font-weight: normal;
 	font-size: 1.8vw;
+    font-weight: 300;
 }
 h5 {
 	margin: 0;
 	line-height: 1.5;
-	font-weight: normal;
 	font-size: 1.8vw;
 	color: $color_2;
+    font-weight: 300;
 }
 h6 {
 	margin: 0;
 	line-height: 1.5;
-	font-weight: normal;
 	letter-spacing: .3vw;
 	font-size: 3vw;
 	line-height: 1.1;
 	font-weight: bold;
 	text-shadow: -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white, 1px 1px 1px white;
 	color: $color_3;
+    font-weight: 300;
 }
 ul {
 	list-style: none;
