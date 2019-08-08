@@ -1,6 +1,4 @@
 $color_1: #292b2c;
-$color_2: white;
-$color_3: black;
 $background_color_1: black;
 $background_color_2: white;
 $background_color_3: rgba(255, 255, 255, 0.2);
@@ -37,7 +35,7 @@ h1 {
 	margin: 0;
 	line-height: 1.5;
 	font-size: 1.5vw;
-	color: $color_2;
+	color: white;
     font-weight: 300;
 }
 h2 {
@@ -48,14 +46,8 @@ h2 {
 	line-height: 1.1;
 	font-weight: bold;
 	text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
-	color: $color_2;
+	color: white;
     font-weight: 300;
-}
-h3 {
-	margin: 0;
-	line-height: 1.5;
-	font-size: 1.6vw;
-    font-weight: 300 !important;
 }
 h4 {
 	margin: 0;
@@ -67,7 +59,7 @@ h5 {
 	margin: 0;
 	line-height: 1.5;
 	font-size: 1.8vw;
-	color: $color_2;
+	color: white;
     font-weight: 300;
 }
 h6 {
@@ -78,7 +70,7 @@ h6 {
 	line-height: 1.1;
 	font-weight: bold;
 	text-shadow: -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white, 1px 1px 1px white;
-	color: $color_3;
+	color: black;
     font-weight: 300;
 }
 ul {
@@ -103,7 +95,7 @@ ul {
 		font-weight: bold;
 		letter-spacing: 5px;
 		text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-		color: $color_3;
+		color: black;
 	}
 }
 .our-story {
@@ -195,7 +187,7 @@ ul {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .guiding-principles-detail {
 	background-color: $background_color_2;
@@ -248,7 +240,7 @@ ul {
 	flex-direction: column;
 	justify-content: center;
 	height: 50px;
-	color: $color_3;
+	color: black;
 }
 @media (min-width: 1200px) {
 	h3 {
@@ -271,11 +263,11 @@ ul {
 	.medium-type {
 		padding: 5px 35px;
 	}
-	h1 {
+	h1{
 		font-size: 14px;
 	}
 	h2 {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	h3 {
 		font-size: 14px;
@@ -340,7 +332,7 @@ ul {
 	.txt-type {
 		>.txt {
 			text-shadow: initial;
-			color: $color_2;
+			color: white;
 			font-weight: normal;
 			letter-spacing: normal;
 		}
