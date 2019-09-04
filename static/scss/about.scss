@@ -1,18 +1,4 @@
-$color_1: #292b2c;
-$background_color_1: black;
-$background_color_2: white;
-$background_color_3: rgba(255, 255, 255, 0.2);
 
-/* @font-face {
-    font-family: CooperHewitt;
-    src: url("CooperHewitt-Book.otf") format("opentype");
-}
-
-@font-face {
-    font-family: CooperHewitt;
-    font-weight: bold;
-    src: url("CooperHewitt-Bold.otf") format("opentype");
-} */
 html {
 	font-family: 'Cooper Hewitt' !important;
 	font-weight: 300 !important;
@@ -22,25 +8,29 @@ html {
 .nav-bar {
 	height: 100%;
 	width: 180px;
-	background-color: $background_color_1;
+	background-color: black;
 	position: fixed;
 }
 body {
 	height: 100vh;
 	margin: 0px;
-	background-color: $background_color_2;
-	color: $color_1;
+	background-color: white;
+	// color: white;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+h1,h3{
+	line-height: 1.5;
 }
 h1 {
-	margin: 0;
-	line-height: 1.5;
 	font-size: 1.5vw;
 	color: white;
     font-weight: 300;
 }
 h2 {
-	margin: 0;
-	line-height: 1.5;
 	letter-spacing: .3vw;
 	font-size: 3vw;
 	line-height: 1.1;
@@ -49,22 +39,21 @@ h2 {
 	color: white;
     font-weight: 300;
 }
-h4 {
-	margin: 0;
-	line-height: 1.5;
+h3 {
 	font-size: 1.8vw;
     font-weight: 300;
 }
-h5 {
-	margin: 0;
-	line-height: 1.5;
+h4{
 	font-size: 1.8vw;
 	color: white;
     font-weight: 300;
 }
+h5{
+    font-size: 1.3vw;
+    color: black;
+    font-weight: 400;
+}
 h6 {
-	margin: 0;
-	line-height: 1.5;
 	letter-spacing: .3vw;
 	font-size: 3vw;
 	line-height: 1.1;
@@ -81,7 +70,7 @@ ul {
 	margin: 0px 0px 0px 180px;
 }
 .medium-type {
-	background-color: $background_color_1;
+	background-color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -97,20 +86,13 @@ ul {
 		color: black;
 	}
 }
-.our-story {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 40px 60px;
-	justify-content: space-around;
-}
 .our-mission {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	padding: 40px 60px;
 	justify-content: space-around;
-	background-color: $background_color_3;
+	background-color: rgba(255, 255, 255, 0.2);
 	background-blend-mode: lighten;
 	background-repeat: no-repeat;
 	height: 70vh;
@@ -125,58 +107,11 @@ ul {
 	background-repeat: repeat;
 	justify-content: initial;
 }
-.join-us {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 40px 60px;
-	justify-content: space-around;
-	padding-left: 0px;
-	padding-bottom: 0px;
-	img {
-		flex-grow: 2;
-		width: 60%;
-		max-width: 100%;
-		height: auto;
-		border: 3px solid black;
-		border-left: initial;
-	}
-}
-.our-story-info {
-	display: flex;
-	flex-direction: column;
-	max-width: 100%;
-}
 .our-mission-info {
 	display: flex;
 	flex-direction: column;
 	max-width: 100%;
 	align-self: flex-start;
-}
-.double-img-overlap {
-	ul {
-		padding: 0;
-		display: grid;
-		grid-template-columns: 25px 25px auto;
-		grid-template-rows: 25px 25px auto;
-	}
-	img {
-		border: 3px solid black;
-		width: 500px;
-		height: 350px;
-	}
-	li {
-		&:nth-child(1) {
-			grid-row: 2 / span 2;
-			grid-column: 1 / span 2;
-			z-index: 1;
-		}
-		&:nth-child(2) {
-			grid-row: 1 / span 2;
-			grid-column: 2 / span 2;
-			z-index: 2;
-		}
-	}
 }
 .mission-border {
 	padding: 5px 0px;
@@ -189,13 +124,13 @@ ul {
 	justify-content: space-around;
 }
 .guiding-principles-detail {
-	background-color: $background_color_2;
+	background-color: white;
 	margin-right: 25px;
 	margin-bottom: 30px;
 	width: 25vw;
 }
 .our-capacity {
-	background-color: $background_color_1;
+	background-color: black;
 	display: flex;
 	padding: 40px 60px;
 	flex-direction: column;
@@ -207,18 +142,17 @@ ul {
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 20px 0px;
-	padding: 20px 20px;
+	padding: 30px;
 	border: 3px solid white;
 }
 .our-capacity-detail {
 	position: relative;
-	width: 10vw;
-	padding: 15px;
+	padding: 15px 50px 15px 50px;
 	padding-left: 0px;
-	z-index: 1;
 }
 .our-sponsors {
 	padding: 30px 60px;
+    background-color: white;
 }
 .sponsors-img {
 	img {
@@ -227,28 +161,45 @@ ul {
 		padding: 10px 0;
 	}
 }
-.join-us-info {
-	width: 35%;
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
-	padding: 10px 20px;
-}
 .end-m {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 50px;
 	color: black;
+    background-color: white;
 }
+
+.our-story__img, .join-us__img{
+    background-color: black;
+    height: 500px;
+    background-size: cover;
+    background-position: center; }
+.our-story__text, .join-us__text {
+    padding: 32px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    max-width: 450px;
+    margin: auto; }
+.our-story__text-wrap, .join-us__text-wrap {
+    width: 100%;
+    min-height: 360px;
+    display: inline-block; }
+.our-story, .join-us{
+    position: relative;
+    min-height: 500px;
+    background-color: white;
+}
+.our-story::after, .join-us::after {
+    content: ' ';
+    display: block;
+    clear: both; }
+
 @media (min-width: 1200px) {
 	h3 {
-		font-size: 16px;
-	}
-	h4 {
 		font-size: 18px;
 	}
-	h5 {
+	h4 {
 		font-size: 18px;
 	}
 	.our-story-info {
@@ -257,72 +208,41 @@ ul {
 	.our-mission-info {
 		max-width: 50%;
 	}
+    .our-story__img, .join-us__img{
+        height: 90%;
+        width: 50%;
+        position: absolute;
+        top: 0; }
+    .our-story__right, .join-us__right{
+        right: 0; }
+    .our-story__left, .join-us__left{
+        left: 0; }
+    .our-story__text, .join-us__text{
+        max-width: 400px;
+        padding-left: 0;
+        padding-right: 0; }
+
+    .our-story__text-wrap, .join-us__text-wrap{
+      width: 50%; }
 }
 @media (max-width: 800px) {
 	.medium-type {
 		padding: 5px 35px;
 	}
-	h1{
+	h1, h3, h4{
 		font-size: 14px;
 	}
-	h2 {
+	h2, h5 {
 		font-size: 20px;
-	}
-	h3 {
-		font-size: 14px;
-	}
-	h4 {
-		font-size: 14px;
-	}
-	h5 {
-		font-size: 14px;
-	}
-	h6 {
-		font-size: 14px;
-	}
-	.double-img-overlap {
-		ul {
-			grid-template-rows: auto;
-		}
-		img {
-			width: 100%;
-			height: auto;
-			border: 1px solid white;
-		}
-		li {
-			&:nth-child(1) {
-				width: 0px;
-				height: 0px;
-				margin: 0px;
-				padding: 0px;
-			}
-		}
 	}
 	.our-capacity-detail {
 		width: auto;
-	}
-	.join-us {
-		img {
-			width: 100%;
-			height: auto;
-		}
-		padding: 20px;
-		padding-left: 0px;
-	}
-	.our-story {
-		padding: 20px;
 	}
 	.our-mission {
 		padding: 20px;
 		height: 50vh;
 	}
-	.guiding-principles {
-		padding: 20px;
-	}
-	.our-capacity {
-		padding: 20px;
-	}
-	.our-sponsors {
+	.guiding-principles, .our-capacity, .our-sponsors {
 		padding: 20px;
 	}
 	.guiding-principles-info {
