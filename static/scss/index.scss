@@ -2,6 +2,19 @@
 @import 'utilities/margins';
 @import 'utilities/transitions';
 
+body{
+    overflow-x: hidden;
+}
+.fullscreen-background__text h2{
+    font-size: 1.5rem;
+}
+.fullscreen-background__text a{
+    color: white;
+}
+.fullscreen-background__text a:hover{
+    color: #ffff00ff;
+    text-decoration: none;
+}
 .fullscreen-background {
     width: 100%;
     overflow: hidden;
