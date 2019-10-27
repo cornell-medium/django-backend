@@ -26,7 +26,8 @@ The _Django_ powered web platform for Medium, a student design organization base
 
 4. Now go ahead and activate the virtual environment:
 
-`source venv/bin/activate`
+`source venv/bin/activate` for mac
+`source venv/Scripts/activate` for PC
 
 5. With the virtual enviornment setup and activated, install the project dependencies:
 
