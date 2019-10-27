@@ -6,18 +6,28 @@ $(document).ready(function() {
   var scrollInProgress = false;
   var eventsAng = {};
   var curAngle = 90;
-  $('.desktop__event').each(function() {
+  var counter = 0;
+  $($('.desktop__event').get().reverse()).each(function() {
     var event = $(this);
     var id = event.data('event-id');
     eventsAng[id] = curAngle;
 
     var coords = calcCoords(curAngle);
-    event.css('left', coords[0] + 'px');
-    event.css('top', coords[1] + 'px');
+    // BUG! if more than 12 events (360/30 = 12) -> doesn't work so got rid of
+    // initializing and just handles events not in wheel to be put off the window
+    // until user moves to it
+    if (counter > 1) {
+      event.css('top', '-500' + 'px');
+    }
+    // BUG FIX (from above)
+    // event.css('left', coords[0] + 'px');
+    // event.css('top', coords[1] + 'px');
+
     if(id === selectedEventId)
       event.addClass('active');
     event.fadeIn(250);
 		curAngle += 30;
+    counter +=1;
   });
 
   $('#event-' + selectedEventId).fadeIn(250);
@@ -25,7 +35,7 @@ $(document).ready(function() {
   // Select the nearest event (calculated by the backend Python script on pageload)
   selectedEventId = initialEventId;
   scrollTo(initialEventId);
-  
+
   // *** Action handlers ***
   // Disable normal scrolling
   $('body').on('scroll mousewheel wheel touchmove DOMMouseScroll', function(e) {
@@ -110,14 +120,14 @@ $(document).ready(function() {
       key.preventDefault(); // prevent the default action (scroll / move caret)
     }
   });
-  
+
   // Handle resize events (events will have to be repositioned)
   $(window).resize(function() {
     if(window.innerWidth > 850) {
       $('.desktop__event').each( function() {
         var event = $(this);
         var angle = eventsAng[event.data('event-id')];
-    
+
         var coords = calcCoords(angle);
         event.css('left', coords[0] + 'px');
         event.css('top', coords[1] + 'px');
@@ -161,11 +171,11 @@ $(document).ready(function() {
         var direction = deltaAng > 0 ? 1 : -1;
 
         var arcParams = {
-          center: [wheelCenterX, wheelCenterY],	
-          radius: wheelRadius,	
+          center: [wheelCenterX, wheelCenterY],
+          radius: wheelRadius,
           start: eventAng,
-          end: targetAng, 
-          dir: direction 
+          end: targetAng,
+          dir: direction
         }
         event.animate({path : new $.path.arc(arcParams)}, 300, function() {
           if(eventId === id)
