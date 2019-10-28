@@ -15,10 +15,6 @@ $(document).ready(function() {
     var event = $(this);
     var id = event.data('event-id');
     eventsAng[id] = curAngle;
-    if (id == 0 || id == 1) {
-      console.log(this)
-    }
-
     // var coords = calcCoords(curAngle);
     // BUG! if more than 12 events (360/30 = 12) -> doesn't work so got rid of
     // initializing and just handles events not in wheel to be put off the window
@@ -37,7 +33,8 @@ $(document).ready(function() {
     counter +=1;
   });
 
-  $('#event-' + (Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))).fadeIn(250);
+  // $('#event-' + (Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))).fadeIn(250);
+   $('#event-' + selectedEventId).fadeIn(250);
 
   // Select the nearest event (calculated by the backend Python script on pageload)
   selectedEventId = initialEventId;
@@ -75,9 +72,8 @@ $(document).ready(function() {
 
   // Trigger scroll to the selected event on desktop click
   $('.desktop__event').click( function() {
-    console.log(selectedEventId);
     var id = $(this).data('event-id');
-    selectedEventId = Math.abs(id - (numEvents - 1)) % numEvents; // to get correct id based on order
+    selectedEventId = Number(id); // to get correct id based on order
     scrollTo(selectedEventId);
   });
 
@@ -195,8 +191,13 @@ $(document).ready(function() {
       }
     });
 
-    $('#event-' + (Math.abs(currentEventId - (numEvents - 1)) % (numEvents))).fadeOut(250, function() {
-      $('#event-' + (Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))).slideDown(250);
+    // $('#event-' + (Math.abs(currentEventId - (numEvents - 1)) % (numEvents))).fadeOut(250, function() {
+    //   $('#event-' + (Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))).slideDown(250);
+    //   currentEventId = selectedEventId;
+    //   scrollInProgress = false;
+    // });
+    $('#event-' + currentEventId).fadeOut(250, function() {
+      $('#event-' + selectedEventId).slideDown(250);
       currentEventId = selectedEventId;
       scrollInProgress = false;
     });
