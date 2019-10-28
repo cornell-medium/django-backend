@@ -10,17 +10,21 @@ $(document).ready(function() {
   var curAngle = 90;
   var counter = 0;
   // var initialEventId = numEvents - 1;
+  console.log($('.desktop__event'));
   $('.desktop__event').each(function() {
     var event = $(this);
     var id = event.data('event-id');
     eventsAng[id] = curAngle;
+    if (id == 0 || id == 1) {
+      console.log(this)
+    }
 
-    var coords = calcCoords(curAngle);
+    // var coords = calcCoords(curAngle);
     // BUG! if more than 12 events (360/30 = 12) -> doesn't work so got rid of
     // initializing and just handles events not in wheel to be put off the window
     // until user moves to it
     if (counter > 1) {
-      event.css('top', '-500' + 'px');
+      event.css('top', '-1000' + 'px');
     }
     // BUG FIX (from above)
     // event.css('left', coords[0] + 'px');
