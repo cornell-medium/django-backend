@@ -1,7 +1,5 @@
 $(document).ready(function() {
   // *** Setup ***
-  // 0 in selected/current event id vars in this context is actually 12 in div element ids because events list is reversed in html
-  // to orient in this direction, you need to reference element with div id 'event-Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))'
   var numEvents = $('.desktop__event').length;
   var selectedEventId = 0;
   var currentEventId = 0;
@@ -33,7 +31,6 @@ $(document).ready(function() {
     counter +=1;
   });
 
-  // $('#event-' + (Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))).fadeIn(250);
    $('#event-' + selectedEventId).fadeIn(250);
 
   // Select the nearest event (calculated by the backend Python script on pageload)
@@ -191,11 +188,6 @@ $(document).ready(function() {
       }
     });
 
-    // $('#event-' + (Math.abs(currentEventId - (numEvents - 1)) % (numEvents))).fadeOut(250, function() {
-    //   $('#event-' + (Math.abs(selectedEventId - (numEvents - 1)) % (numEvents))).slideDown(250);
-    //   currentEventId = selectedEventId;
-    //   scrollInProgress = false;
-    // });
     $('#event-' + currentEventId).fadeOut(250, function() {
       $('#event-' + selectedEventId).slideDown(250);
       currentEventId = selectedEventId;
