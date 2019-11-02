@@ -1,0 +1,90 @@
+.narrative {
+  &__title::after {
+    width:2.5%;
+    background-color: white;
+    height:5px;
+    display: block;
+    margin: 10px auto;
+    content: ' ';
+  }
+  &__definition {
+    padding: 10%;
+    background-color: black;
+    color:white;
+    &__text {
+      font-size: 36px;
+    }
+  }
+  &__countdown {
+    padding: 5%;
+    &__label {
+      font-size: 10px;
+    }
+    &__days, &__hours, &__minutes, &__seconds {
+      font-size: 36px;
+    }
+  }
+  &__message {
+    margin-bottom: 5%;
+    font-size: 36px;
+  }
+}
+
+// fade
+.fade_in {
+  opacity: 0;
+}
+
+// arrow
+body {
+	background-color: #282828;
+}
+
+div.arrow {
+	width: 3vmin;
+	height: 3vmin;
+	box-sizing: border-box;
+	position: absolute;
+	left: 49%;
+  margin-top: 10%;
+	transform: rotate(135deg);
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: .3vmin .3vmin 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transition: .2s ease;
+		display: block;
+		transform-origin: 100% 0;
+	}
+
+
+	&:after {
+		content: '';
+		float: left;
+		position: relative;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		border-width: 0 .3vmin 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transform-origin: 100% 0;
+		transition:.2s ease;
+	}
+
+	&:hover::after {
+		transform: rotate(45deg);
+		border-color: orange;
+		height: 80px;
+	}
+	&:hover::before {
+		border-color: orange;
+		transform: scale(1);
+
+	}
+
+}

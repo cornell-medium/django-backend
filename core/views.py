@@ -69,6 +69,10 @@ def teams(request):
     context = {}
     return render(request, 'sections/teams.html', context)
 
+def diversity_and_inclusion(request):
+    context = {}
+    return render(request, 'sections/d&i.html', context)
+
 def about(request):
     context = {}
     return render(request, 'sections/about.html', context)

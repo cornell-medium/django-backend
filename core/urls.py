@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^teams/$', views.teams, name='teams'),
     url(r'^about/$', views.about, name='about'),
     url(r'^admin/', admin.site.urls),
+    url(r'^d&i/', views.diversity_and_inclusion, name='diversity_and_inclusion'),
 ]
