@@ -1,3 +1,14 @@
+// .no-display {
+//     display: none;
+// }
+//
+// #hamburger {
+//     display: inherit;
+// }
+.fullscreen-background{
+    height: 100vh;
+    background-color: black;
+}
 .narrative {
   &__title::after {
     width:2.5%;
@@ -29,7 +40,18 @@
     font-size: 36px;
   }
 }
-
+.intro{
+    top: 50%;
+    width: 50%;
+    margin: auto;
+    color: white;
+    font-size: 120%;
+}
+.holographic{
+    background: linear-gradient(to right, #41a8e7 40%, #e595e0 50%, #dace1b 60%);
+    color: transparent;
+    background-clip: text;
+}
 // fade
 .fade_in {
   opacity: 0;
