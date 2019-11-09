@@ -40,23 +40,59 @@
     font-size: 36px;
   }
 }
+// fade
+.fade_in {
+  opacity: 0;
+}
 .intro{
     top: 50%;
     width: 50%;
+    padding: 10%;
     margin: auto;
     color: white;
     font-size: 120%;
 }
+//gradient words
 .holographic{
     background: linear-gradient(to right, #41a8e7 40%, #e595e0 50%, #dace1b 60%);
     color: transparent;
     background-clip: text;
 }
-// fade
-.fade_in {
-  opacity: 0;
+.border img{
+    border: 5px solid white;
+    margin: 15px 0;
+}
+.border img:hover{
+    border-image: linear-gradient(45deg, #417ae7 0%, #e595e0 50%, #81f4f4 100%);
+    border-image-slice: 1;
+    border-width: 5px;
 }
 
+.article{
+    padding: 0 20px;
+    color: white;
+}
+.article .detail{
+    margin: 10px 0px;
+}
+.articleBtn{
+    font-size: 12px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    width: 50%;
+    margin: auto;
+    padding: 3px 0;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.articleBtn:hover{
+    // background: linear-gradient(15deg, #5563d5 0%, #9bd0c9 50%, #f790ca 100%);
+    background: linear-gradient(10deg, #AFEEFC 13.54%, #F2C4E2 83.86%);
+    letter-spacing: 1px;
+    border: none;
+    color: black;
+}
 // arrow
 body {
 	background-color: #282828;
