@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var end = new Date('December 15, 2019 12:00:00').getTime();
+  var end = new Date('December 4, 2019 12:00:00').getTime();
   var countdown = setInterval(function() {
     var now = new Date().getTime();
 
@@ -48,5 +48,28 @@ $(document).ready(function() {
         });
 
     });
+
+    $('.articleBtn').hover( function(e){
+        $(this).css({
+            "background": "#AFEEFC",
+            "border": "none",
+            "color": "black"
+        })
+        $('.border img').css({
+            "border-image": "linear-gradient(45deg, #417ae7 0%, #e595e0 50%, #81f4f4 100%)",
+            "border-image-slice": "1",
+            "border-width": "5px"
+        })
+        }, function(e){
+            $(this).css({
+                "background": "transparent",
+                "border": "2px solid white",
+                "color": "white"
+            })
+
+            $('.border img').css({
+                "border": "5px solid white"
+            })
+        });
 
 });
