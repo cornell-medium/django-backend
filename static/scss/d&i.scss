@@ -135,15 +135,5 @@ div.arrow {
 		transition:.2s ease;
 	}
 
-	&:hover::after {
-		transform: rotate(45deg);
-		border-color: orange;
-		height: 80px;
-	}
-	&:hover::before {
-		border-color: orange;
-		transform: scale(1);
-
-	}
 
 }

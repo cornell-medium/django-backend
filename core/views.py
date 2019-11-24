@@ -76,3 +76,14 @@ def diversity_and_inclusion(request):
 def about(request):
     context = {}
     return render(request, 'sections/about.html', context)
+
+def article(request, article_id):
+    context = {}
+    print(article_id)
+    if article_id == "1":
+        return render(request, 'sections/article_1.html', context)
+    elif article_id == "2":
+        return render(request, 'sections/article_2.html', context)
+    elif article_id == "3":
+        return render(request, 'sections/article_1.html', context)
+    return render(request, 'sections/index.html', context)

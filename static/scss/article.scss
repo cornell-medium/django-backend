@@ -1,0 +1,75 @@
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Cooper Hewitt', sans-serif;
+    margin: 0;
+}
+h1, h2{
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+}
+h2{
+
+    font-weight:100;
+    color: black;
+}
+.row{
+    margin: 10% 0;
+}
+
+.author{
+    border-top: 1px solid black;
+    padding-top: 10%;
+}
+.interact{
+    height: 50vh;
+}
+.interact label{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+.textarea{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 50%;
+  margin: auto;
+
+}
+.textarea label{
+  margin-top: 20vh;
+  letter-spacing: 5px;
+  font-size: 16px;
+}
+.fallarea{
+  display: inline-block;
+  padding: 0px 12px;
+  margin-top: -20px;
+  position: relative;
+}
+.fall{
+  display: inline-block;
+  color: black;
+  margin-right: 6px;
+  animation: shimmy 5s;
+}
+@keyframes shimmy {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 450px);
+    opacity: 0;
+  }
+}
+.old{
+  opacity: 0;
+}
+#thoughts{
+    width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid black;
+}
