@@ -50,13 +50,14 @@ $(document).ready(function() {
     });
 
     $('.articleBtn').hover( function(e){
-        $(this).css({
+        var articleNum = this.id.slice(-1);
+        $('#button_'+articleNum).css({
             "background": "#AFEEFC",
-            "border": "none",
+            "border": "2px solid #AFEEFC",
             "color": "black"
         })
-        $('.border img').css({
-            "border-image": "linear-gradient(45deg, #417ae7 0%, #e595e0 50%, #81f4f4 100%)",
+        $('#article_'+articleNum+' img').css({
+            "border-image": "linear-gradient(45deg, #41a8e7 0%, #e595e0 50%, #dace1b 100%)",
             "border-image-slice": "1",
             "border-width": "5px"
         })

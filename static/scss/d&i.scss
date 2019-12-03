@@ -1,10 +1,6 @@
-// .no-display {
-//     display: none;
-// }
-//
-// #hamburger {
-//     display: inherit;
-// }
+h4{
+    margin: 0
+}
 .fullscreen-background{
     height: 100vh;
     background-color: black;
@@ -45,8 +41,6 @@
   opacity: 0;
 }
 .intro{
-    top: 50%;
-    width: 50%;
     padding: 10%;
     margin: auto;
     color: white;
@@ -66,9 +60,12 @@
 .article{
     padding: 0 20px;
     color: white;
-}
-.article .detail{
-    margin: 10px 0px;
+    a{
+        color:white;
+    }
+    .detail{
+        margin: 5% 0;
+    }
 }
 .articleBtn{
     font-size: 12px;
@@ -81,18 +78,6 @@
     border-radius: 20px;
     align-self: center;
 }
-// .article:hover .articleBtn{
-//     background: linear-gradient(15deg, #5563d5 0%, #9bd0c9 50%, #f790ca 100%);
-//     background: #AFEEFC;
-//     letter-spacing: 1px;
-//     border: none;
-//     color: black;
-// }
-// .article:hover .border img{
-//     border-image: linear-gradient(45deg, #417ae7 0%, #e595e0 50%, #81f4f4 100%);
-//     border-image-slice: 1;
-//     border-width: 5px;
-// }
 
 // arrow
 body {
@@ -136,4 +121,13 @@ div.arrow {
 	}
 
 
+}
+
+.end-m{
+    background-color: black;
+    color: white;
+
+    h3{
+        margin:0;
+    }
 }

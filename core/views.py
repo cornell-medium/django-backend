@@ -85,5 +85,5 @@ def article(request, article_id):
     elif article_id == "2":
         return render(request, 'sections/article_2.html', context)
     elif article_id == "3":
-        return render(request, 'sections/article_1.html', context)
+        return render(request, 'sections/article_3.html', context)
     return render(request, 'sections/index.html', context)
