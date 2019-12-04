@@ -1,33 +1,35 @@
 //loop through all of the spans and add in the class old after they are done falling
 $(document).ready(function(){
-  var count = 0;
-  console.log('ready');
+    var count = 0;
 
-  $("#thoughts").keyup(function(e){
+    const interval = setInterval(function() {
+        for(var i = 0; i <= count; i++){
+           $("."+i+"").addClass("old");
+        }
+      }, 5000);
 
-    if(e.keyCode == 32){
-      count++;
-      //let turnDeg = Math.floor(Math.random() * 360);
-      var drop = findNextWord($("#thoughts").val());
-      console.log(findNextWord($("#thoughts").val()));
-      $(".fallarea").append("<span class = \"fall "+ count +"\">"+drop+"</span>");
-      setTimeout(function() {
-        $("."+count+"").addClass("old");
-      }, 1500);
+    $("#thoughts").keyup(function(e){
 
-    }
-
-    if(e.keyCode == 13){
-      $("#thoughts").val("");
-      $(".fallarea").text("");
-    }
-  })
+      if(e.keyCode == 32){
+        count++;
+        var drop = findNextWord($("#thoughts").val());
+        $(".fallarea").append("<span class = \"fall "+ count +"\">"+drop+"</span>");
+      }
 
 
-});
+      if((e.keyCode == 8 && $("#thoughts").val() == "") || e.keyCode == 13){
+        console.log("cleared");
+        $("#thoughts").val("");
+        $(".fallarea").text("");
+      }
+
+
+    })
 
 
 
+
+  });
 
 function findNextWord(s){
   let space = 0;

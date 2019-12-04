@@ -20,11 +20,9 @@
     </div>
 
     <div class = "row">
+
         <div class = "col-md-1"></div>
-        <div class = "col-md-5">
-            <img alt = "random" class = "img-fluid" src = "https://source.unsplash.com/random/445x500" />
-        </div>
-        <div class = "col-md-5">
+        <div class = "col-md-10">
             <p>
                 It started with a conversation among the thought curators on the Editorial team. After Colton’s proposal of the “donut” diagram, we
                 discovered that whenever we try to improve diversity of a design, its inclusivity will be the cost and decrease proportionally. And
@@ -44,6 +42,9 @@
             </p>
         </div>
         <div class = "col-md-1"></div>
+        <div class = "col-md-12 images">
+            <img src="{% static 'imgs\dni\donut.jpg' %}" class="img-fluid"/>
+        </div>
     </div>
 
     <!-- <img alt = "random" class = "img-fluid" src = "https://source.unsplash.com/random/1440x900" /> -->
@@ -56,8 +57,16 @@
         </div>
         <div class = "col-md-2"></div>
         <div class = "col-md-3"></div>
-        <div class = "col-md-3">The inclusivity team defined inclusivity as “communication, compromising, understanding, and willingness to include.” </div>
-        <div class = "col-md-3">The diversity team emphasized diversity in people’s skills. They expect their brothers to be experts in diverse areas of design.</div>
+        <div class = "col-md-3">
+            <p>
+                The inclusivity team defined inclusivity as “communication, compromising, understanding, and willingness to include.”
+            </p>
+        </div>
+        <div class = "col-md-3">
+            <p>
+                The diversity team emphasized diversity in people’s skills. They expect their brothers to be experts in diverse areas of design.
+            </p>
+        </div>
         <div class = "col-md-3"></div>
     </div>
 
@@ -86,12 +95,13 @@
         <div class = "col-md-2"></div>
 
         <div class = "col-md-2"></div>
-        <div class = "col-md-8">
+        <div class = "col-md-8 images">
             <p>
                 To evaluate the applicant’s passion while giving both potential and mature designers equal opportunity, the inclusive team
                 decides to pick a variety of prompts and ask the applicants to critique three pieces of their choice. The team provides a
                 total of nine prompts in three categories: branding identity, photography, and CAD.
             </p>
+            <img src="{% static 'imgs\dni\inclusiveTeam.png' %}" class="img-fluid"/>
         </div>
         <div class = "col-md-2"></div>
 
@@ -102,22 +112,15 @@
         <div class = "col-md-2"></div>
 
         <div class = "col-md-2"></div>
-        <div class = "col-md-8">
+        <div class = "col-md-8 images">
             <p>
                 The diverse team aims to design an application process that classifies the applicants for them and builds a basis for picking
                 equally from different design fields. Thus, their application requires applicants not only to respond to a prompt, but also
                 requires them to submit three or more past designs reflecting their strength.
             </p>
+            <img src="{% static 'imgs\dni\diverseTeam.png' %}" class="img-fluid"/>
         </div>
         <div class = "col-md-2"></div>
-    </div>
-
-    <div class = "row">
-        <div class = "col-md-1"></div>
-        <div class = "col-md-10">
-            <img alt = "random" class = "img-fluid" src = "https://source.unsplash.com/random/" />
-        </div>
-        <div class = "col-md-1"></div>
     </div>
 
     <div class = "row">
@@ -147,7 +150,6 @@
         <!-- <div class = "col-md-1"></div> -->
         <div class = "col-md-5">
             <h2>Mollie Zhang</h2>
-            <h2>Computer Sciecne</h2>
             <p>
                 It started with a conversation among the thought curators on the Editorial team. After Colton’s proposal of the “donut” diagram,
                 we discovered that whenever we try to improve diversity of a design, its inclusivity will be the cost and decrease proportionally.
@@ -161,7 +163,7 @@
             <label><p>
                 Write your thoughts here.
                 </p></label>
-            <input id="thoughts" type="text" placeholder = "press enter to clear" autofocus/>
+            <input id="thoughts" type="text" placeholder = "press enter to clear"/>
             <div class = "fallarea"></div>
     </div>
 </div>
