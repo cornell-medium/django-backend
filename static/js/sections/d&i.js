@@ -1,25 +1,25 @@
 $(document).ready(function() {
-  var end = new Date('December 4, 2019 12:00:00').getTime();
-  var countdown = setInterval(function() {
-    var now = new Date().getTime();
-
-    var distance = end - now;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-
-    $('.narrative__countdown__days').html(days);
-    $('.narrative__countdown__hours').html(hours);
-    $('.narrative__countdown__minutes').html(minutes);
-    $('.narrative__countdown__seconds').html(seconds)
-
-    if (distance < 0) {
-     clearInterval(x);
-     document.getElementById("demo").innerHTML = "EXPIRED";
-   }
- }, 1000);
+ //  var end = new Date('December 4, 2019 12:00:00').getTime();
+ //  var countdown = setInterval(function() {
+ //    var now = new Date().getTime();
+ //
+ //    var distance = end - now;
+ //    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+ //    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+ //    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+ //    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ //
+ //
+ //    $('.narrative__countdown__days').html(days);
+ //    $('.narrative__countdown__hours').html(hours);
+ //    $('.narrative__countdown__minutes').html(minutes);
+ //    $('.narrative__countdown__seconds').html(seconds)
+ //
+ //    if (distance < 0) {
+ //     clearInterval(x);
+ //     document.getElementById("demo").innerHTML = "EXPIRED";
+ //   }
+ // }, 1000);
 });
 
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
             "border": "2px solid #AFEEFC",
             "color": "black"
         })
-        $('#article_'+articleNum+' img').css({
+        $('#article_'+articleNum+' .img').css({
             "border-image": "linear-gradient(45deg, #41a8e7 0%, #e595e0 50%, #dace1b 100%)",
             "border-image-slice": "1",
             "border-width": "5px"
@@ -68,7 +68,7 @@ $(document).ready(function() {
                 "color": "white"
             })
 
-            $('.border img').css({
+            $('.border .img').css({
                 "border": "5px solid white"
             })
         });

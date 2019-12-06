@@ -1,0 +1,125 @@
+.design-panel-list {
+  position: absolute;
+  z-index: 2;
+  margin-left: 45%;
+  padding-right: 25px;
+  margin-top: 50px;
+  overflow: hidden; }
+
+.banner {
+  width: 70%;
+  height: 100%;
+  background-color: #f7f7f7; }
+
+.narrative {
+  padding-top: 65%;
+  width: 100%;
+  overflow: hidden; }
+  .narrative_quote {
+    text-align: center;
+    font-size: 25px;
+    padding: 100px 200px 50px 200px;
+    letter-spacing: 2px; }
+    .narrative_quote_author {
+      font-size: 12px;
+      padding-top: 10px; }
+  .narrative__img {
+    height: 382px;
+    background-size: cover;
+    border: solid 50px #F7F7F7;
+    background-position: center; }
+  .narrative__submit {
+    margin-left: 30%;
+    background: transparent;
+    color: #444444;
+    outline: none;
+    border: 3px solid #444444;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out; }
+    .narrative__submit:hover {
+      border-color: #797979;
+      color: #797979;
+      text-decoration: none; }
+  .narrative__text {
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 500px;
+    margin: auto; }
+    .narrative__text-wrap {
+      width: 100%;
+      min-height: 382px;
+      display: inline-block; }
+  .narrative__wrap {
+    position: relative;
+    min-height: 382px; }
+    .narrative__wrap::after {
+      content: ' ';
+      display: block;
+      clear: both; }
+
+@media screen and (min-width: 1200px) {
+  .left {
+    float: left; }
+
+  .right {
+    float: right; }
+
+  .narrative {
+    padding-top: 70%; }
+    .narrative_quote {
+      padding: 10%; }
+    .narrative__img {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0; }
+    .narrative__right {
+      right: 0; }
+    .narrative__left {
+      left: 0; }
+    .narrative__text {
+      max-width: 300px;
+      padding-left: 0;
+      padding-right: 0; }
+      .narrative__text-wrap {
+        width: 50%; } }
+@media screen and (max-width: 1150px) {
+  div.design-panel-list {
+    float: none;
+    padding-top: 100%;
+    z-index: 0;
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 0; }
+
+  .banner {
+    width: 100%; }
+
+  .narrative {
+    padding-top: 210%; }
+    .narrative_quote {
+      padding: 10%; } }
+@media screen and (max-width: 600px) {
+  .narrative {
+    padding-top: 200%; }
+    .narrative_quote {
+      padding: 10%; } }
+@media screen and (max-width: 550px) {
+  .narrative {
+    padding-top: 220%; }
+    .narrative_quote {
+      padding: 10%; } }
+@media screen and (orientation: landscape) and (max-width: 480px) {
+  .narrative {
+    padding-top: 240%; }
+    .narrative_quote {
+      padding: 10%; } }
+@media screen and (orientation: portrait) and (max-width: 480px) {
+  .narrative {
+    padding-top: 260%; }
+    .narrative_quote {
+      padding: 10%; } }
+
+/*# sourceMappingURL=designpanel.css.map */
