@@ -40,7 +40,7 @@ p{
     width: 50vw;
     height: 47px;
     border-bottom: 1px solid black;
-    
+
     }
 .interact{
     height: 40vh;
@@ -56,10 +56,6 @@ p{
     input{
         outline: none;
         font-family: 'Cooper Hewitt';
-    }
-
-    &::placeholder{
-
     }
 }
 
@@ -93,4 +89,14 @@ p{
 }
 .old{
   opacity: 0;
+}
+
+@media (max-width: 600px){
+    .interact{
+        display: none;
+    }
+
+    .author div{
+        margin: 10px 0;
+    }
 }
