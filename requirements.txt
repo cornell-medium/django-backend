@@ -1,6 +1,6 @@
 appdirs==1.4.1
 Django==1.11.18
-httplib2==0.10.3
+httplib2==0.18.0
 olefile==0.44
 packaging==16.8
 Pillow==4.1.0
