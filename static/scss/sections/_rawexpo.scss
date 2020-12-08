@@ -37,7 +37,9 @@
   background-repeat: no-repeat;
 
 	video {
-		width:100%;
+		display: block;
+		margin: 0 auto;
+		height:100%;
 	}
 
 }
@@ -93,20 +95,25 @@
 
 // senses scss
 .senses {
-	padding: 7% 5%;
+	padding: 5% 5%;
 	display: block;
 	position: relative;
-
 	border-bottom: 30px white solid;
 	// padding-bottom: 0;
 
-	&__imgs img {
-		margin-top: 5%;
-		width: 19.3%;
-		padding:0;
-		text-align: center;
-		border-right: 10px white solid;
+	&__imgs {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		img {
+			width: 45%;
+			padding:0;
+			text-align: center;
+		}
 	}
+	
+	
 
 	h1 {
 		// padding-left: 3%;
@@ -210,4 +217,14 @@
 
 	}
 
+	.header video{
+		width: inherit;
+		margin: 0;
+	}
+
+	.senses__imgs{
+		img{
+			margin-bottom: 5%;
+		}
+	}
 }

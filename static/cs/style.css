@@ -458,11 +458,9 @@ p {
   position: relative;
   border-bottom: 30px white solid; }
   .senses__imgs img {
-    margin-top: 5%;
-    width: 19.3%;
+		width: 22%;
     padding: 0;
-    text-align: center;
-    border-right: 10px white solid; }
+    text-align: center;}
   .senses h1 {
     text-transform: uppercase; }
 
