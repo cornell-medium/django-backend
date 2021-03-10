@@ -12,8 +12,7 @@ html {
 body {
 	height: 100vh;
 	margin: 0px;
-	background-color: white;
-	// color: white;
+	// background-color: white;
 }
 
 h1, h2, h3, h4, h6{
@@ -39,12 +38,12 @@ h2 {
 }
 h3 {
 	font-size: 1.8vw;
-    font-weight: 300;
+  font-weight: 300;
 }
 h4{
-	font-size: 1.8vw;
-	color: white;
-    font-weight: 300;
+	font-size: 1.5vw;
+	color: black;
+	font-weight: lighter;
 }
 h5{
     font-size: 1.3vw;
@@ -107,76 +106,47 @@ ul {
 	height: 70vh;
 	background-size: cover;
 }
-.guiding-principles {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 40px 60px;
-	justify-content: space-around;
-	background-repeat: repeat;
-	justify-content: initial;
-}
 .our-mission-info {
 	display: flex;
 	flex-direction: column;
 	max-width: 100%;
 	align-self: flex-start;
+	text-align: center;
 }
 .mission-border {
 	padding: 5px 0px;
 }
-.guiding-principles-info {
-	padding: 20px 0;
+
+.our-team{
+	max-width: 83%;
+	margin: 96px auto;
+}
+.our-team-info{
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 }
-.guiding-principles-detail {
-	background-color: white;
-	margin-right: 25px;
-	margin-bottom: 30px;
-	width: 25vw;
+
+.member{
+	margin: 0 15px;
 }
-.our-capacity {
-	background-color: black;
-	display: flex;
-	padding: 40px 60px;
-	flex-direction: column;
-	flex-wrap: wrap;
+.member-img{
+	width: 200px;
+	height: 200px;
+	background-position: center center;
+  // background-repeat: no-repeat;
+	margin: 15px 0;
 }
-.our-capacity-info {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin: 20px 0px;
-	padding: 30px;
-	border: 3px solid white;
-}
-.our-capacity-detail {
-	position: relative;
-	padding: 15px 50px 15px 50px;
-	padding-left: 0px;
-}
-.our-sponsors {
-	padding: 30px 60px;
-    background-color: white;
-}
-.sponsors-img {
-	img {
-		width: 20%;
-		height: auto;
-		padding: 10px 0;
-	}
-}
+
 .end-m {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 40px;
 	color: black;
-    background-color: white;
+  // background-color: white;
+	text-align: center;
 }
 
 .our-story__img, .join-us__img{
@@ -197,7 +167,7 @@ ul {
 .our-story, .join-us{
     position: relative;
     min-height: 450px;
-    background-color: white;
+    // background-color: white;
 }
 .our-story::after, .join-us::after {
     content: ' ';
@@ -215,25 +185,22 @@ ul {
 	.our-story-info {
 		max-width: 50%;
 	}
-	.our-mission-info {
-		max-width: 50%;
-	}
-    .our-story__img, .join-us__img{
-        height: 90%;
-        width: 50%;
-        position: absolute;
-        top: 0; }
-    .our-story__right, .join-us__right{
-        right: 0; }
-    .our-story__left, .join-us__left{
-        left: 0; }
-    .our-story__text, .join-us__text{
-        max-width: 400px;
-        padding-left: 0;
-        padding-right: 0; }
+	.our-story__img, .join-us__img{
+		height: 90%;
+		width: 50%;
+		position: absolute;
+		top: 0; }
+	.our-story__right, .join-us__right{
+		right: 0; }
+	.our-story__left, .join-us__left{
+		left: 0; }
+	.our-story__text, .join-us__text{
+		max-width: 400px;
+		padding-left: 0;
+		padding-right: 0; }
 
-    .our-story__text-wrap, .join-us__text-wrap{
-      width: 50%; }
+	.our-story__text-wrap, .join-us__text-wrap{
+		width: 50%; }
 }
 @media (max-width: 800px) {
 	.medium-type {
@@ -245,18 +212,13 @@ ul {
 	h2, h5 {
 		font-size: 20px;
 	}
-	.our-capacity-detail {
-		width: auto;
-	}
 	.our-mission {
 		padding: 20px;
 		height: 50vh;
 	}
-	.guiding-principles, .our-capacity, .our-sponsors {
-		padding: 20px;
-	}
-	.guiding-principles-info {
-		justify-content: center;
+	.our-team-info{
+		flex-direction: column;
+		align-items: center;
 	}
 	.txt-type {
 		>.txt {

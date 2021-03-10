@@ -7,26 +7,16 @@
 {% endblock %}
 
 {% block content %}
-<div class="medium-type">
-    <h1> medium is a
-        <span class="txt-type" data-wait="3000" data-speed="100" data-words='["community of students who want to engage with design ",
-                "playground to foster innovation and experimentation",
-                "link between creative individuals, campus organizations, and the design industry",
-                "resource for developing design thinking and design skills"]'></span>
-    </h1>
-</div>
 
 <div class="our-story">
     <div class="our-story__img our-story__right" style="background-image: url('{% static 'imgs/pam.jpg' %}');"></div>
     <div class="our-story__text-wrap left">
         <div class="our-story__text">
-            <h2> our story</h2>
-            <br />
+            <div class="narrative__title">our story</div>
             <h5>medium (n.)
                 <br />
                 an agency or a means to do something
             </h5>
-            <br />
             Medium was founded in 2015 by 3 AAP students who decided to transform a design publication into a live
             event.
             Together, they created RAW Expo, a design exhibition in which students from all across campus showcased
@@ -42,121 +32,791 @@
 
 <div class="our-mission" style="background-image: url('{% static 'imgs/story.jpg' %}');">
     <div class="our-mission-info">
-        <center>
-            <h2 class="mission-border"> our mission</h2>
+            <div class="narrative__title">our mission</div>
             <br />
             To build an interdisciplinary collective of individuals, as a platform for engaging in
             dialogue and collaboration about design.
-        </center>
     </div>
 </div>
 
-
-<div class="guiding-principles" style="background-image: url('{% static 'imgs/mediumbckgrnd.jpg' %}');">
-    <h2> guiding <br /> principles</h2>
-    <div class="guiding-principles-info">
-        <div class="guiding-principles-detail">
-            <b>take initiative.</b>
-            <br />
-            There’s no hand holding here. We celebrate self-starters,
-            those who are brave enough to forge their own paths.
-
-        </div>
-        <div class="guiding-principles-detail">
-            <b>open your mind.</b>
-            <br />
-            True innovation starts when one sees the world differently
-            from the layman. Opportunities are everywhere, if you observe
-            carefully.
-
-        </div>
-        <div class="guiding-principles-detail">
-            <b>better together.</b>
-            <br />
-            Through collaboration and peer crits, we benefit from one
-            another’s diverse expertise by seeing in ways we wouldn’t
-            have before.
-
-        </div>
-        <div class="guiding-principles-detail">
-            <b>stay humble.</b>
-            <br />
-            A designer’s teacher is the user. Assume nothing,
-            and always consider different perspectives.
-
-        </div>
-        <div class="guiding-principles-detail">
-            <b>design & deliver.</b>
-            <br />
-            It’s more than just ideas, it’s about making it a reality.
-            We hold one another accountable to our commitments and responsibilities.
-
-        </div>
-        <div class="guiding-principles-detail">
-            <b>assume good.</b>
-            <br />
-            Everyone’s trying their best. Be understanding of one
-            another’s situations and treat each other with kindness.
-
-        </div>
-    </div>
-</div>
-
-<div class="our-capacity">
-    <div class="our-capacity-name">
-        <h6>our capacity</h6>
-    </div>
-
-    <div class="our-capacity-info">
-        <div class="our-capacity-detail">
-            <h4>spatial <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>exhibition <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>product <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>event <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>website <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>marketing <br /> & branding</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>entrepreneurship</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>app <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>graphic <br />design</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>design <br />strategy</h4>
-        </div>
-        <div class="our-capacity-detail">
-            <h4>ux <br />design</h4>
-        </div>
-    </div>
-
-</div>
-
-<!-- <div class = "our-sponsors">
-            <h2>our sponsors</h2>
-            <div class = "sponsors-img">
-                <img src = "{% static 'imgs/adobe.png' %}" />
+<div class="our-team">
+    <div class="narrative__title">our team</div>
+    <div class = "our-team-info">
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\lindsey_1.jpg' %}');">
             </div>
-        </div> -->
+            <div class = "member-details">
+                <h3>Lindsey Luo</h3>
+                <text>
+                    computer science '22
+                    <br>
+                    president
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\jen_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Jennifer Lee</h3>
+                <text>
+                    mechanical engineering '22
+                    <br>
+                    vice-president
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Robert Brooks</h3>
+                <text>
+                    hospitality administration '23
+                    <br>
+                    treasurer
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\thomas_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Thomas Lu</h3>
+                <text>
+                    computer science '22
+                    <br>
+                    director of external relations
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\helen_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Helen Li</h3>
+                <text>
+                    biological sciences & english '22
+                    <br>
+                    director of internal relations
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Adam Herold</h3>
+                <text>
+                    economics & psychology '23
+                    <br>
+                    director of design education
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\sheri_1.png' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Sheri Guo</h3>
+                <text>
+                    information science '22
+                    <br>
+                    design director
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\marc_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Marc Liu</h3>
+                <text>
+                    information science '23
+                    <br>
+                    creative director
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Miriam Gitelman</h3>
+                <text>
+                    architecture '23
+                    <br>
+                    experience lead
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>David Ni</h3>
+                <text>
+                    architecture '24
+                    <br>
+                    curation lead
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\lauren_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Lauren Lam</h3>
+                <text>
+                    architecture '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Hahnbee Lee</h3>
+                <text>
+                    information science '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Joseph Yoon</h3>
+                <text>
+                    chemical engineering '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Erika Hauschild</h3>
+                <text>
+                    information science '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\fiona_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Fiona Rath</h3>
+                <text>
+                    hotel administration '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\judy_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Judy Huang</h3>
+                <text>
+                    computer science '22
+                    <br>
+                    incubates & curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Iris Kim</h3>
+                <text>
+                    computer science '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Stephanie Zheng</h3>
+                <text>
+                    hotel administration '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Daisy Dai</h3>
+                <text>
+                    architecture '21
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\sarahl_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Sarah Langleben</h3>
+                <text>
+                    information science '24
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\felix_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Felix Shi</h3>
+                <text>
+                    mechanical engineering '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Stephanie Young</h3>
+                <text>
+                    mechanical engineering '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Puja Oak</h3>
+                <text>
+                    physics/mechanical engineering '24
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\angela_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Angela Lan</h3>
+                <text>
+                    fiber science & apparel design '24
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Nayeon (Nancy) Kwon</h3>
+                <text>
+                    dea '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Nathaniel Smith</h3>
+                <text>
+                    plant science '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Sophie Ruan</h3>
+                <text>
+                    information science '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Rani Sheth</h3>
+                <text>
+                    fashion design management '24
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\ashley_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Ashley Herrera</h3>
+                <text>
+                    dea '24
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Amanda He</h3>
+                <text>
+                    information science '23
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Shirley Ren</h3>
+                <text>
+                    information science '22
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\cheryl_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Cheryl Zeng</h3>
+                <text>
+                    civil engineering '24
+                    <br>
+                    incubates
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Chris Jang</h3>
+                <text>
+                    dea '23
+                    <br>
+                    graphic communication
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Nicole Hu</h3>
+                <text>
+                    communication '22
+                    <br>
+                    graphic communication
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\ashleyx_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Ashley Xiang</h3>
+                <text>
+                    dea '24
+                    <br>
+                    graphic communication
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\elise_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Elise Vergos</h3>
+                <text>
+                    mechanical engineer '24
+                    <br>
+                    graphic communication
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\sehar_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Sehar Mapara</h3>
+                <text>
+                    fine arts '24
+                    <br>
+                    graphic communication
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\mikayla_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Mikayla Lin</h3>
+                <text>
+                    fiber science '24
+                    <br>
+                    graphic communication
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\daphne_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Daphne Tan</h3>
+                <text>
+                    hotel administration '23
+                    <br>
+                    experience
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\dana_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Dana Gong</h3>
+                <text>
+                    information science '22
+                    <br>
+                    experience
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Tan Halacoglu</h3>
+                <text>
+                    architecture 'na
+                    <br>
+                    experience
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\diego_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Diego Virtue</h3>
+                <text>
+                    computer science '24
+                    <br>
+                    experience
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\ryun_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Ryun Shim</h3>
+                <text>
+                    information science '24
+                    <br>
+                    experience
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\connie_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Connie Liu</h3>
+                <text>
+                    information science '23
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Ariya Feng</h3>
+                <text>
+                    policy analysis & management '22
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Minzie Kim</h3>
+                <text>
+                    fine arts '23
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>YunMi Koh</h3>
+                <text>
+                    dea '20
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Gloria Shi</h3>
+                <text>
+                    architecture '24
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Mitchell Lin</h3>
+                <text>
+                    computer science '22
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\sara_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Sara choi</h3>
+                <text>
+                    communication '22
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Clement Xu</h3>
+                <text>
+                    comperative literature '23
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Chloe Chen</h3>
+                <text>
+                    dea '23
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Lily Stern</h3>
+                <text>
+                    dea '24
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\becky_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Becky Han</h3>
+                <text>
+                    information science '23
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\roster\stephanie_1.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Stephanie Tom</h3>
+                <text>
+                    english '22
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Angela Chang</h3>
+                <text>
+                    biological sciences & art hist '22
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Francesca Lojacono</h3>
+                <text>
+                    fine arts '24
+                    <br>
+                    curation
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Kelly Zhan</h3>
+                <text>
+                    landscape architecture '22
+                    <br>
+                    task force
+                </text>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img" style="background-image: url('{% static 'imgs\logo21.jpg' %}');">
+            </div>
+            <div class = "member-details">
+                <h3>Nahbuma Gana</h3>
+                <text>
+                    information science & communication '22
+                    <br>
+                    task force
+                </text>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
 <div class="join-us" id="joinus">
     <div class="join-us__img join-us__left" style="background-image: url('{% static 'imgs/joinus.jpg' %}');"></div>
     <div class="join-us__text-wrap right">
         <div class="join-us__text">
-            <h2>join us</h2>
+            <div class="narrative__title">join us</div>
             <h5>
                 Email: mediumdesigncollective@gmail.com
                 <br />
@@ -169,9 +829,9 @@
 </div>
 
 <div class="end-m">
-    <center>
+    <!-- <center> -->
         <h3><b>- m -</b></h3>
-    </center>
+    <!-- </center> -->
 </div>
 {% endblock %}
 
